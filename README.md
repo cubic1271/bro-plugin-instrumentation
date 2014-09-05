@@ -10,7 +10,7 @@ The bro instrumentation plugin is composed of a few parts:
 
 ### Building ###
 
-_NOTE_ OS/X requires rebuilding / relinking bro before the syshook libraries will work as intended.  TODO: document how to do this.
+_NOTE_ OS/X requires rebuilding / relinking bro before the syshook libraries will work as intended.  _TODO_: document how to do this.
 
 * build the syshook shared libraries (via 'make preload').
 * make and install the plugin (via 'make install').
