@@ -1,0 +1,33 @@
+%%{
+
+#include <string>
+#include "Val.h"
+#include "Plugin.h"
+
+%%}
+
+module Instrumentation;
+
+function SetCollectionTimer%(target: double%): bool
+	%{
+	plugin::Instrumentation::plugin.SetCollectionTimer(target);
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function SetCollectionCount%(target: int%): bool
+	%{
+	plugin::Instrumentation::plugin.SetCollectionCount((uint64_t)target);
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function SetCollectionTarget%(target: string%): bool
+	%{
+	plugin::Instrumentation::plugin.SetCollectionTarget(std::string((char *)target->Bytes()));
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function Flush%(%): bool
+	%{
+	plugin::Instrumentation::plugin.FlushCollection();
+	return new Val(1, TYPE_BOOL);
+	%}
