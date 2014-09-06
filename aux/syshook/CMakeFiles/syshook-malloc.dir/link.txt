@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -dynamiclib -Wl,-headerpad_max_install_names   -o libsyshook-malloc.dylib -install_name /Users/clarkg1/Code/bro-instrumentation/aux/libsyshook-malloc.dylib CMakeFiles/syshook-malloc.dir/src/syshooks/syshook-malloc.cc.o 

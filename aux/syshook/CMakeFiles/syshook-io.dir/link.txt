@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -dynamiclib -Wl,-headerpad_max_install_names   -o libsyshook-io.dylib -install_name /Users/clarkg1/Code/bro-instrumentation/aux/libsyshook-io.dylib CMakeFiles/syshook-io.dir/src/syshooks/syshook-io.cc.o 
