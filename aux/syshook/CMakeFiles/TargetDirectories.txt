@@ -1,0 +1,2 @@
+/Users/clarkg1/Code/bro-instrumentation/aux/CMakeFiles/syshook-io.dir
+/Users/clarkg1/Code/bro-instrumentation/aux/CMakeFiles/syshook-malloc.dir

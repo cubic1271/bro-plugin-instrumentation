@@ -1,0 +1,659 @@
+TPcmMsrDriver
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Info.plist /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist
+cProcessPCH++ /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver normal x86_64
+cGenerateDSYMFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver
+cCopyStringsFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings PcmMsr/en.lproj/InfoPlist.strings
+cTouch /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005348554B00000000000000AA
+t1397249355
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/SDKSettings.plist
+c000000005311299F00000000000004B3
+t1393633695
+s1203
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005311299F00000000000001DE
+t1393633695
+s478
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist
+c00000000527796730000000000000659
+t1383569011
+s1625
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch
+c0000000052779673000000000000005C
+t1383569011
+s92
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp
+c00000000527796730000000000002584
+t1383569011
+s9604
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp
+c0000000052779673000000000000308D
+t1383569011
+s12429
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/en.lproj/InfoPlist.strings
+c0000000052779673000000000000002D
+t1383569011
+s45
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c
+c0000000053D2EBF100000000000001A7
+t1406331889
+s423
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o
+t1406331890
+s135148
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o
+t1406331890
+s157168
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver.LinkFileList
+c0000000053D2EBF10000000000000132
+t1406331889
+s306
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o
+t1406331890
+s4656
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext
+t1406331889
+s102
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM
+t2
+s0
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Info.plist
+t1406331889
+s2052
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver
+t1406331890
+s60016
+
+N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings
+t1406331890
+s92
+
+N/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch
+t1406331889
+s101164
+
+N/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch
+t1406331889
+s113608
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb5c3db712383b941^61e1e0712383b941^---0#1#1#--18"Check dependencies36"43EBFEDB-DE62-4C45-8B9F-94ED9118E533-
+
+CCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428024689.929130
+e428024690.365617
+r1
+xCompileC
+xbuild/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOLib.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/stdarg.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/cdefs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_symbol_aliasing.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_posix_availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/appleapiopts.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/system.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdint.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/message.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/port.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_statistics.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/time_value.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_notify.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/memory_object_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_prot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_sync.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/exception_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/_structs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/fp_reg.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/eflags.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/Availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/AvailabilityInternal.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/clock_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_attributes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_inherit.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_purgable.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_behavior.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_region.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kmod.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/std_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_interface.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/clock_priv.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/strings.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/ndr.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/_OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/i386/_OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/i386/OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/notify.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mig_errors.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mig.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_priv.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/mach_debug_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/ipc_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/vm_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/zone_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/page_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/hash_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/lockgroup_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_security.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/lock_set.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor_set.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/semaphore.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/sync_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/x86_64/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_act.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/x86_64/thread_act.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_map.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/assert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/assert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/macro_help.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/kern_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/thread.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/debug.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/sched_prim.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/clock.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_time.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/machine/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/i386/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/queue.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/ipc_mig.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/libkern.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_structs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOReturn.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/error.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOTypes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdbool.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSTypes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/OSBase.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/device/device_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOLocks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/machine/machine_routines.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/i386/machine_routines.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/pexpert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOInterrupts.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/machine/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/i386/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSAtomic.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stddef.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/thread_call.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/sysctl.h
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOService.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IORegistryEntry.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSContainers.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSObject.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSMetaClass.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSReturn.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/TargetConditionals.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSBoolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSString.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSymbol.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSData.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSNumber.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSArray.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSCollection.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSet.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSOrderedSet.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSCollectionIterator.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSIterator.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSDictionary.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSerialize.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSUnserialize.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IODeviceMemory.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOMemoryDescriptor.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IONotifier.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOKitDebug.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/pwr_mgt/IOPMpowerState.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/pwr_mgt/IOPM.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOMessage.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOServicePM.h
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
+o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp:113:27: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
+o                    ret = *(long*)pParam;
+o[0;1;32m                        ~ ^~~~~~~~~~~~~~
+o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp:115:27: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'long long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
+o                    ret = *(long long*)pParam;
+o[0;1;32m                        ~ ^~~~~~~~~~~~~~~~~~~
+o[0m2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp181"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o [1mPcmMsr/PcmMsr.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler95efed712383b941^46995d722383b941^-719"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp:113:27: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m                    ret = *(long*)pParam;[0;1;32m                        ~ ^~~~~~~~~~~~~~[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp:115:27: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'long long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m                    ret = *(long long*)pParam;[0;1;32m                        ~ ^~~~~~~~~~~~~~~~~~~[0m2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@86"Implicit conversion loses integer precision: 'long' to 'uint32_t' (aka 'unsigned int')-428024690#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^112#26#112#26#4067#0#22"Value Conversion Issue2(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^112#26#112#40#4067#8#3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^112#24#112#25#4065#0#-2@91"Implicit conversion loses integer precision: 'long long' to 'uint32_t' (aka 'unsigned int')-428024690#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^114#26#114#26#4160#0#22"Value Conversion Issue2(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^114#26#114#45#4160#13#3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^114#24#114#25#4158#0#-0#0#1#-19%DVTDocumentLocation4@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp0000000000000000^3656"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o [1mPcmMsr/PcmMsr.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -nostdinc -fno-builtin -Wno-trigraphs -fno-exceptions -fno-rtti -msoft-float -Os -fno-common -mkernel -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DKERNEL -DKERNEL_PRIVATE -DDRIVER_PRIVATE -DAPPLE -DNeXT -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fapple-kext -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -I/System/Library/Frameworks/Kernel.framework/PrivateHeaders -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o36"E88251D6-EDF4-4CCC-AC25-E2703A399485-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428024689.929347
+e428024690.365511
+r1
+xCompileC
+xbuild/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOLib.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/stdarg.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/cdefs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_symbol_aliasing.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_posix_availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/appleapiopts.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/system.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdint.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/message.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/port.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_statistics.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/time_value.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_notify.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/memory_object_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_prot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_sync.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/exception_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/_structs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/fp_reg.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/eflags.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/Availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/AvailabilityInternal.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/clock_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_attributes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_inherit.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_purgable.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_behavior.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_region.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kmod.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/std_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_interface.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/clock_priv.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/strings.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/ndr.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/_OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/i386/_OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/i386/OSByteOrder.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/notify.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mig_errors.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mig.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_priv.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/mach_debug_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/ipc_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/vm_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/zone_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/page_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/hash_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach_debug/lockgroup_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_security.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/lock_set.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor_set.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/semaphore.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/sync_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/x86_64/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_act.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/x86_64/thread_act.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_map.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/assert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/assert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/macro_help.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/kern_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/thread.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/debug.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/task.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/sched_prim.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/clock.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_time.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/machine/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/i386/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/queue.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/ipc_mig.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/libkern.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/machine/endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_endian.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_structs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOReturn.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/error.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOTypes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdbool.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSTypes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/OSBase.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/device/device_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOLocks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/locks.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/machine/machine_routines.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/i386/machine_routines.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/pexpert.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOInterrupts.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/machine/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pexpert/i386/boot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSAtomic.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stddef.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/thread_call.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOKitKeys.h
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOService.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IORegistryEntry.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSContainers.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSObject.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSMetaClass.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/libkern/OSReturn.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/TargetConditionals.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSBoolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSString.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSymbol.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSData.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSNumber.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSArray.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSCollection.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSet.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSOrderedSet.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSCollectionIterator.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSIterator.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSDictionary.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSSerialize.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSUnserialize.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IODeviceMemory.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOMemoryDescriptor.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IONotifier.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOKitDebug.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/pwr_mgt/IOPMpowerState.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/pwr_mgt/IOPM.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOMessage.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOServicePM.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOUserClient.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/OSMessageNotification.h
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.h
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
+o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp:172:38: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'unsigned long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
+o    uint32_t num_cores = output_size / sizeof(topologyEntry);
+o[0;1;32m             ~~~~~~~~~   ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+o[0m1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp193"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o [1mPcmMsr/PcmMsrClient.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilercafaed712383b941^64925d722383b941^-417"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp:172:38: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'unsigned long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m    uint32_t num_cores = output_size / sizeof(topologyEntry);[0;1;32m             ~~~~~~~~~   ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@95"Implicit conversion loses integer precision: 'unsigned long' to 'uint32_t' (aka 'unsigned int')-428024690#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@103"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp0000000000000000^171#37#171#37#6907#0#22"Value Conversion Issue2(3@103"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp0000000000000000^171#25#171#60#6895#34#3@103"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp0000000000000000^171#13#171#22#6883#0#-0#0#1#-19%DVTDocumentLocation4@103"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp0000000000000000^3692"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o [1mPcmMsr/PcmMsrClient.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -nostdinc -fno-builtin -Wno-trigraphs -fno-exceptions -fno-rtti -msoft-float -Os -fno-common -mkernel -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DKERNEL -DKERNEL_PRIVATE -DDRIVER_PRIVATE -DAPPLE -DNeXT -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fapple-kext -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -I/System/Library/Frameworks/Kernel.framework/PrivateHeaders -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsrClient.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o36"A75189D6-772F-4F49-A8EA-CBA12077BD59-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CCompileC build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s428024689.929596
+e428024690.093007
+r1
+xCompileC
+xbuild/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdint.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/cdefs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_symbol_aliasing.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/_posix_availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/message.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/port.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/boolean.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/kern_return.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/appleapiopts.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_statistics.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/time_value.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_notify.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/host_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/memory_object_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_prot.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_sync.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/exception_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/exception.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_status.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/_structs.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/fp_reg.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/i386/eflags.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/thread_state.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/i386/processor_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/Availability.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/AvailabilityInternal.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/task_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_info.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_policy.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/thread_special_ports.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/clock_types.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_attributes.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_inherit.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_purgable.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_behavior.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/vm_region.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/machine/vm_param.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/kmod.h
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/std_types.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection161"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c253"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o [1mbuild/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compileree09ee712383b941^e6cf17722383b941^---0#0#1#-19%DVTDocumentLocation2@160"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c0000000000000000^3695"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o [1mbuild/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -nostdinc -std=gnu99 -fno-builtin -Wno-trigraphs -msoft-float -Os -fno-common -mkernel -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DKERNEL -DKERNEL_PRIVATE -DDRIVER_PRIVATE -DAPPLE -DNeXT -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -I/System/Library/Frameworks/Kernel.framework/PrivateHeaders -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -include /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o36"5089E146-E6C1-47A0-8296-5092C2C3E3B3-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CCopyStringsFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings PcmMsr/en.lproj/InfoPlist.strings
+s428024690.436435
+e428024690.437549
+r1
+xCopyStringsFile
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings
+xPcmMsr/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Copy PcmMsr/en.lproj/InfoPlist.strings135"[1mCopyStringsFile[0m build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings PcmMsr/en.lproj/InfoPlist.strings2ec76f722383b941^ac0370722383b941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/en.lproj/InfoPlist.strings0000000000000000^476"[1mCopyStringsFile[0m build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj/InfoPlist.strings PcmMsr/en.lproj/InfoPlist.strings    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Resources/en.lproj -- PcmMsr/en.lproj/InfoPlist.strings36"8A3BA0DC-892A-4DBE-BE66-DCCCEE472AC2-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CGenerateDSYMFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver
+s428024690.398726
+e428024690.436063
+r1
+xGenerateDSYMFile
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Generate /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM129"[1mGenerateDSYMFile[0m [1mbuild/Release/PcmMsrDriver.kext.dSYM[0m build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver1d1e66722383b941^bea26f722383b941^---0#0#1#-19%DVTDocumentLocation2@116"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM003420bbdcffdf42^556"[1mGenerateDSYMFile[0m [1mbuild/Release/PcmMsrDriver.kext.dSYM[0m build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext.dSYM36"AD68AC68-264A-4663-8215-9C89CCE2B11D-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CLd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver normal x86_64
+s428024690.366316
+e428024690.398151
+r1
+xLd
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver
+xnormal
+xx86_64
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver.LinkFileList
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsr.o
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrClient.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libkmodc++.a
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libkmod.a
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.cc_kext.a
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Link /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver84"[1mLd[0m build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver normal x86_6428d65d722383b941^c0ed65722383b941^---0#0#1#--1366"[1mLd[0m build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver normal x86_64    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export MACOSX_DEPLOYMENT_TARGET=10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -filelist /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver.LinkFileList -mmacosx-version-min=10.8 -Xlinker -kext -nostdlib -lkmodc++ /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_info.o -lkmod -lcc_kext -Xlinker -dependency_info -Xlinker /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/Objects-normal/x86_64/PcmMsrDriver_dependency_info.dat -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/MacOS/PcmMsrDriver36"95617D9D-F245-40D7-89B9-9967CB5A9437-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CProcessInfoPlistFile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Info.plist /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist
+s428024689.880861
+e428024689.884228
+r1
+xProcessInfoPlistFile
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Info.plist
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Process /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist113"[1mProcessInfoPlistFile[0m build/Release/PcmMsrDriver.kext/Contents/Info.plist [1mPcmMsr/PcmMsr-Info.plist[0mb5dce1712383b941^65dfe5712383b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist0000000000000000^487"[1mProcessInfoPlistFile[0m build/Release/PcmMsrDriver.kext/Contents/Info.plist [1mPcmMsr/PcmMsr-Info.plist[0m    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    builtin-infoPlistUtility /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Info.plist -expandbuildsettings -platform macosx -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext/Contents/Info.plist36"06E1781E-935C-4A6B-B597-D64358A0B6F8-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CProcessPCH /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s428024689.885200
+e428024689.928489
+r1
+xProcessPCH
+x/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch
+xPcmMsr/PcmMsr-Prefix.pch
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile PcmMsr/PcmMsr-Prefix.pch286"[1mProcessPCH[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler02f5e2712383b941^74b5ed712383b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch0000000000000000^3553"[1mProcessPCH[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -nostdinc -std=gnu99 -fno-builtin -Wno-trigraphs -msoft-float -Os -fno-common -mkernel -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DKERNEL -DKERNEL_PRIVATE -DDRIVER_PRIVATE -DAPPLE -DNeXT -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -I/System/Library/Frameworks/Kernel.framework/PrivateHeaders -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release --serialize-diagnostics /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.d -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch -o /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-achmmzgpsiwpjkdbszipbjfgkvtm/PcmMsr-Prefix.pch.pch36"5719EE41-AA10-4304-8216-4E63094899AF-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CProcessPCH++ /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428024689.884874
+e428024689.928486
+r1
+xProcessPCH++
+x/var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch
+xPcmMsr/PcmMsr-Prefix.pch
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile PcmMsr/PcmMsr-Prefix.pch290"[1mProcessPCH++[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler12f5e2712383b941^ffb0ed712383b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch0000000000000000^3686"[1mProcessPCH++[0m /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch PcmMsr/PcmMsr-Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -nostdinc -fno-builtin -Wno-trigraphs -fno-exceptions -fno-rtti -msoft-float -Os -fno-common -mkernel -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DKERNEL -DKERNEL_PRIVATE -DDRIVER_PRIVATE -DAPPLE -DNeXT -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fapple-kext -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/PcmMsrDriver-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -I/System/Library/Frameworks/Kernel.framework/PrivateHeaders -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release --serialize-diagnostics /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.d -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr-Prefix.pch -o /var/folders/zz/zyxvpxvq6csfxvn_n0000000000000/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/PcmMsr-Prefix-auhtqccvcwuieaexwzelwuhhtunf/PcmMsr-Prefix.pch.pch36"B6814E21-4C85-479D-945B-95BB368A9FB1-
+b45C7661D-843A-454D-866B-AC8503347641
+
+CTouch /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext
+s428024690.437835
+e428024690.442510
+r1
+xTouch
+x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Touch /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext45"[1mTouch[0m build/Release/PcmMsrDriver.kext471e70722383b941^414971722383b941^---0#0#1#--253"[1mTouch[0m build/Release/PcmMsrDriver.kext    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    /usr/bin/touch -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/PcmMsrDriver.kext36"1189A38C-D6DF-4C29-B9FC-F8FEAB29EA53-
+b45C7661D-843A-454D-866B-AC8503347641
+

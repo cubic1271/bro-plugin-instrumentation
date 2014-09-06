@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/clarkg1/Code/bro-instrumentation/aux/src/syshooks/syshook-io.cc
+syshook-io.h
+/Users/clarkg1/Code/bro-instrumentation/aux/src/syshooks/syshook-io.h
+fcntl.h
+-
+assert.h
+-
+stdarg.h
+-
+stddef.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+
+/Users/clarkg1/Code/bro-instrumentation/aux/src/syshooks/syshook-io.h
+stdio.h
+-
+unistd.h
+-
+dlfcn.h
+-
+atomic
+-
+
