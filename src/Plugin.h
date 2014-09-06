@@ -5,6 +5,8 @@
 #include <map>
 #include <plugin/Plugin.h>
 
+#include "Func.h"
+
 namespace plugin {
 namespace Instrumentation {
 
@@ -25,6 +27,8 @@ protected:
 	static double _network_time;
 	// Overridden from plugin::Plugin.
 	virtual plugin::Configuration Configure();
+	static Val* CallBroFunction(const BroFunc* func, Frame *parent, val_list* args);
+	static Val* CallBuiltinFunction(const BuiltinFunc* func, Frame *parent, val_list* args);
 };
 
 extern Plugin plugin;
