@@ -18,6 +18,17 @@ using namespace plugin::Instrumentation;
 
 double Plugin::_network_time = 0.0;
 
+static int _papi_event_set = 0;
+static double _last_network_update = 0.0;
+static double _stats_timer = 0.0;
+static uint64_t _last_count = 0;
+static uint64_t _stats_count = 0;
+static std::string _stats_target = "";
+static std::ofstream _stats_ofstream;
+
+static PCM *_pcm_state;
+static SystemCounterState _original_state;
+
 plugin::Configuration Plugin::Configure()
 	{
 	plugin::Configuration config;
@@ -27,14 +38,6 @@ plugin::Configuration Plugin::Configure()
 	config.version.minor = 0;
 	return config;
 	}
-
-static int _papi_event_set = 0;
-static double _last_network_update = 0.0;
-static double _stats_timer = 0.0;
-static uint64_t _last_count = 0;
-static uint64_t _stats_count = 0;
-static std::string _stats_target = "";
-static std::ofstream _stats_ofstream;
 
 void Plugin::HookUpdateNetworkTime(const double network_time)
 	{	
@@ -226,6 +229,16 @@ void Plugin::InitPreScript()
 	EnableHook(HOOK_UPDATE_NETWORK_TIME);
 	EnableHook(HOOK_CALL_FUNCTION);
 
+	_pcm_state = PCM::getInstance();
+	_pcm_state->program (PCM::DEFAULT_EVENTS, NULL);
+
+	if (_pcm_state->program() != PCM::Success)
+		{
+		reporter->Info("[instrumentation] unable to initialize PCM ...");
+		}
+
+	_original_state = getSystemCounterState();
+
 	reporter->Info("[instrumentation] initialization completed.\n");
 	}
 
@@ -252,11 +265,13 @@ void Plugin::SetCollectionTarget(const std::string target)
 					<< " network_time malloc_count free_count malloc_sz fopen_count" 
 	                << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
 	                << " read_count fread_sz read_sz"
+	                << " instructions_retired l2_hit l2_miss l3_hit l3_miss mem_read mem_write"
 	                << std::endl;
 	_stats_ofstream << "#types" 
 					<< " double int int int int"
 					<< " int int int int int int"
-					<< " int int int" 
+					<< " int int int int" 
+					<< " int int int int int int int"
 					<< std::endl;
 	_stats_ofstream << "#separator \\x20" << std::endl;
 	}
@@ -266,11 +281,22 @@ void Plugin::WriteCollection()
 	assert(_stats_ofstream.good());
 	MemoryInfo info = GetMemoryCounts();
 	ReadWriteInfo rwinfo = GetReadWriteCounts();
+		// method call to be profiled goes here!
+	SystemCounterState curr_state = getSystemCounterState();
+
 	_stats_ofstream << _network_time << " " << info.malloc_count << " " << info.free_count << " ";
 	_stats_ofstream << info.malloc_sz << " " << rwinfo.fopen_count << " " << rwinfo.open_count << " ";
 	_stats_ofstream << rwinfo.fwrite_count << " " << rwinfo.write_count << " " << rwinfo.fwrite_sz << " ";
 	_stats_ofstream << rwinfo.write_sz << " " << rwinfo.fread_count << " " << rwinfo.read_count << " ";
-	_stats_ofstream << rwinfo.fread_sz << " " << rwinfo.read_sz << "\n"; 
+	_stats_ofstream << rwinfo.fread_sz << " " << rwinfo.read_sz;
+	_stats_ofstream << getInstructionsRetired(_original_state, curr_state) << " " 
+	                << getL2CacheHits(_original_state, curr_state) << " "
+	                << getL2CacheMisses(_original_state, curr_state) << " "
+	                << getL3CacheHits(_original_state, curr_state) << " "
+	                << getL3CacheMisses(_original_state, curr_state) << " "
+	                << getBytesReadFromMC(_original_state, curr_state) << " "
+	                << getBytesWrittenToMC(_original_state, curr_state) << "\n";
+
 	}
 
 void Plugin::FlushCollection()

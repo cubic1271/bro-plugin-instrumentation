@@ -5,6 +5,7 @@
 #include <map>
 #include <plugin/Plugin.h>
 
+#include "pcm/cpucounters.h"
 #include "Func.h"
 
 namespace plugin {
@@ -13,6 +14,12 @@ namespace Instrumentation {
 class Plugin : public ::plugin::Plugin
 {
 public:
+	struct FunctionCounterSet {
+		uint64_t malloc_count;
+		uint64_t free_count;
+		uint64_t malloc_sz;
+	};
+
     virtual void HookUpdateNetworkTime(const double network_time);
     virtual void InitPreScript();
     virtual Val* HookCallFunction(const Func* func, Frame *parent, val_list* args);
@@ -25,7 +32,10 @@ public:
 
 protected:
 	static double _network_time;
-	// Overridden from plugin::Plugin.
+	// transient state needed to keep track of counter start points while functions are executing
+	static std::vector<FunctionCounterSet> _counter_stack;
+	// persistent counter state
+	static std::map<std::string, FunctionCounterSet> _counters;
 	virtual plugin::Configuration Configure();
 	static Val* CallBroFunction(const BroFunc* func, Frame *parent, val_list* args);
 	static Val* CallBuiltinFunction(const BuiltinFunc* func, Frame *parent, val_list* args);

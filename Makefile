@@ -6,9 +6,15 @@ all: build-it
 
 # Makes shared libraries which may be preloaded (or, on OS/X, linked against bro directly)
 preload:
-	@pushd aux && \
+	@pushd aux/syshook && \
 	cmake . && \
-	make
+	make && \
+	popd
+
+pcm:
+	@pushd aux/intel-pcm-2.6 && \
+	make && \
+	popd
 
 check:
 	@test -n "$$BRO" || (echo 'BRO not set; use "make BRO=<path-to-bro-source-tree>"'; exit 1)
