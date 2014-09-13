@@ -57,6 +57,27 @@ void cpuReadMSR(void* pIData){
     }
 }
 
+void cpuReadAllMSR(void* pIData){
+    pcm_msr_group_data_t* data = (pcm_msr_group_data_t*)pIData;
+    volatile uint cpu = cpu_number();
+    if(cpu >= data->cpu_offset && cpu < (data->num_cpus + data->cpu_offset))
+    {
+        data->value[cpu - data->cpu_offset] = RDMSR(data->msr_num);
+    }
+}
+
+void cpuReadAllMultiMSR(void *pIData){
+    pcm_multi_msr_group_data_t* data = (pcm_multi_msr_group_data_t*)pIData;
+    volatile uint cpu = cpu_number();
+    if(cpu >= data->cpu_offset && cpu < (data->num_cpus + data->cpu_offset))
+    {
+        for(int i = 0; i < data->num_msrs; ++i)
+        {
+            data->value[ ((cpu - data->cpu_offset) * MSR_GROUP_MAX_SZ) + i] = RDMSR(data->msr_num[i]);
+        }
+    }
+}
+
 void cpuWriteMSR(void* pIDatas){
     pcm_msr_data_t* idatas = (pcm_msr_data_t*)pIDatas;
     volatile uint cpu = cpu_number();
@@ -170,6 +191,66 @@ IOReturn PcmMsrDriverClassName::readMSR(pcm_msr_data_t* idatas,pcm_msr_data_t* o
     else
     {
         IOLog("Tried to read from a core with id higher than max core id.\n");
+    }
+    return ret;
+}
+
+IOReturn PcmMsrDriverClassName::readMSRGroup(pcm_msr_group_data_t* idatas, pcm_msr_group_data_t* odatas){
+    // All the msr_nums should be the same, so we just use the first one to pass to all cores
+    IOReturn ret = kIOReturnBadArgument;
+    if(idatas->num_cpus > MSR_CPU_MAX_SZ)
+    {
+        IOLog("Tried to read more than the supported number of CPUs");
+        return ret;
+    }
+    if(idatas->cpu_offset < num_cores)
+    {
+        mp_rendezvous_no_intrs(cpuReadAllMSR, (void*)idatas);
+        
+        odatas->num_cpus = idatas->num_cpus;
+        odatas->msr_num = idatas->msr_num;
+        for(int i = 0; i < idatas->num_cpus; ++i)
+        {
+            odatas->value[i] = idatas->value[i];
+        }
+        ret = kIOReturnSuccess;
+    }
+    else
+    {
+        IOLog("Tried to read from a cpu offset with an id higher than max core id.\n");
+    }
+    return ret;
+}
+
+IOReturn PcmMsrDriverClassName::readMultiMSRGroup(pcm_multi_msr_group_data_t* idatas, pcm_multi_msr_group_data_t* odatas){
+    // All the msr_nums should be the same, so we just use the first one to pass to all cores
+    IOReturn ret = kIOReturnBadArgument;
+    if(idatas->num_cpus > MSR_CPU_MAX_SZ || idatas->num_cpus == 0)
+    {
+        IOLog("Tried to read more than the supported number of CPUs");
+        return ret;
+    }
+    if(idatas->num_msrs > MSR_GROUP_MAX_SZ || idatas->num_msrs == 0)
+    {
+        IOLog("Tried to read more than the supported number of MSRs");
+        return ret;
+    }
+    if(idatas->cpu_offset < num_cores)
+    {
+        mp_rendezvous_no_intrs(cpuReadAllMultiMSR, (void*)idatas);
+        odatas->num_cpus = idatas->num_cpus;
+        odatas->cpu_offset = idatas->cpu_offset;
+        odatas->num_msrs = idatas->num_msrs;
+        for(int i = 0; i < idatas->num_msrs; ++i)
+        {
+            odatas->msr_num[i] = idatas->msr_num[i];
+        }
+        memcpy(odatas->value, idatas->value, sizeof(uint64_t) * MSR_CPU_MAX_SZ * MSR_GROUP_MAX_SZ);
+        ret = kIOReturnSuccess;
+    }
+    else
+    {
+        IOLog("Tried to read from a cpu offset with an id higher than max core id.\n");
     }
     return ret;
 }

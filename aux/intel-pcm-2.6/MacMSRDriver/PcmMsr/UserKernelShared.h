@@ -17,11 +17,32 @@
 #ifndef USER_KERNEL_SHARED
 #define USER_KERNEL_SHARED
 #include <stdint.h>
+
+#define MSR_GROUP_MAX_SZ  (8)  // Maximum number of MSRs that can be queried
+#define MSR_CPU_MAX_SZ    (16)  // Maximum number of CPUs that can be queried at once
+
 typedef struct {
     uint64_t value;
     uint32_t cpu_num;
     uint32_t msr_num;
 } pcm_msr_data_t;
+
+// Execute a single MSR read against multiple CPUs
+typedef struct {
+    uint64_t value[MSR_CPU_MAX_SZ];
+    uint16_t num_cpus;
+    uint16_t cpu_offset;
+    uint32_t msr_num;
+} pcm_msr_group_data_t;
+
+// Execute multiple MSR reads against multiple CPUs
+typedef struct {
+    uint64_t value[MSR_CPU_MAX_SZ * MSR_GROUP_MAX_SZ];
+    uint32_t msr_num[MSR_GROUP_MAX_SZ];
+    uint16_t num_cpus;
+    uint16_t cpu_offset;
+    uint32_t num_msrs;
+} pcm_multi_msr_group_data_t;
 
 typedef struct {
     uint64_t value;
@@ -51,6 +72,8 @@ enum {
     kOpenDriver,
     kCloseDriver,
 	kReadMSR,
+    kReadMSRGroup,
+    kReadMultiMSRGroup,
     kWriteMSR,
     kBuildTopology,
     kGetNumInstances,

@@ -23,6 +23,8 @@ private:
     void closeConnection();
 public:
     MSRAccessor();
+    int32_t readMultiGroup(uint16_t num_cpus, uint16_t offset, uint32_t num_msrs, uint64_t* msr_num, uint64_t *value);
+    int32_t readGroup(uint16_t num_cpus, uint16_t offset, uint64_t msr_num, uint64_t *value);
     int32_t read(uint32_t cpu_num, uint64_t msr_num, uint64_t * value);
     int32_t write(uint32_t cpu_num, uint64_t msr_num, uint64_t value);
     int32_t buildTopology(uint32_t num_cores, void*);

@@ -14,6 +14,7 @@
 //    
 #include "MSRAccessor.h"
 #include <exception>
+
 MSRAccessor::MSRAccessor(){
     service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching(kPcmMsrDriverClassName));
     openConnection();
@@ -38,6 +39,63 @@ int32_t MSRAccessor::read(uint32_t core_num, uint64_t msr_num, uint64_t * value)
         return sizeof(uint64_t);
     }
     else{
+        return -1;
+    }
+}
+
+int32_t MSRAccessor::readMultiGroup(uint16_t num_cpus, uint16_t offset, uint32_t num_msrs, uint64_t* msr_num, uint64_t *value){
+    pcm_multi_msr_group_data_t idatas, odatas;
+    size_t size = sizeof(pcm_multi_msr_group_data_t);
+    idatas.cpu_offset = offset;
+    idatas.num_cpus = num_cpus;
+    idatas.num_msrs = num_msrs;
+    for(int i = 0; i < num_msrs && i < MSR_GROUP_MAX_SZ; ++i)
+    {
+        idatas.msr_num[i] = msr_num[i];
+    }
+    for(int i = 0; i < MSR_CPU_MAX_SZ; ++i)
+    {
+        for(int j = 0; j < MSR_GROUP_MAX_SZ; ++j)
+        {
+            idatas.value[i * MSR_GROUP_MAX_SZ + j] = 0;
+            value[i * MSR_GROUP_MAX_SZ + j] = 0;
+        }
+    }
+    kern_return_t ret = readMultiMSRGroup(connect, &idatas, &size, &odatas, &size);
+    if(ret == KERN_SUCCESS)
+    {
+        for(int i = 0; i < MSR_CPU_MAX_SZ; ++i)
+        {
+            for(int j = 0; j < MSR_GROUP_MAX_SZ; ++j)
+            {
+                value[i * MSR_GROUP_MAX_SZ + j] = odatas.value[i * MSR_GROUP_MAX_SZ + j];
+            }
+        }
+        return sizeof(uint64_t) * MSR_GROUP_MAX_SZ * MSR_CPU_MAX_SZ;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+int32_t MSRAccessor::readGroup(uint16_t num_cpus, uint16_t offset, uint64_t msr_num, uint64_t *value){
+    pcm_msr_group_data_t idatas, odatas;
+    size_t size = sizeof(pcm_msr_group_data_t);
+    idatas.msr_num = msr_num;
+    idatas.cpu_offset = offset;
+    idatas.num_cpus = num_cpus;
+    kern_return_t ret = readMSRGroup(connect, &idatas, &size, &odatas, &size);
+    if(ret == KERN_SUCCESS)
+    {
+        for(int i = 0; i < MSR_CPU_MAX_SZ; ++i)
+        {
+            value[i] = odatas.value[i];
+        }
+        return sizeof(uint64_t) * MSR_CPU_MAX_SZ;
+    }
+    else
+    {
         return -1;
     }
 }

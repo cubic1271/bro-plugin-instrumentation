@@ -26,7 +26,7 @@ function SetCollectionTarget%(target: string%): bool
 	return new Val(1, TYPE_BOOL);
 	%}
 
-function Flush%(%): bool
+function CollectionFlush%(%): bool
 	%{
 	plugin::Instrumentation::plugin.FlushCollection();
 	return new Val(1, TYPE_BOOL);

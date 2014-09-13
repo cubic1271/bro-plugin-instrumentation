@@ -17,6 +17,10 @@
 #ifndef MSR_KERNEL_SHARED
 #define MSR_KERNEL_SHARED
 #include <stdint.h>
+
+#define MSR_GROUP_MAX_SZ  (8)  // Maximum number of MSRs that can be queried
+#define MSR_CPU_MAX_SZ    (16)  // Maximum number of CPUs that can be queried at once
+
 typedef struct {
     uint64_t value;
     uint32_t cpu_num;
@@ -34,16 +38,24 @@ typedef struct{
 // A kernel version of the topology entry structure. It has
 // an extra unused int to explicitly align the struct on a 64bit
 // boundary, preventing the compiler from adding extra padding.
-enum {
-    kOpenDriver,
-    kCloseDriver,
-    kReadMSR,
-    kWriteMSR,
-    kBuildTopology,
-    kGetNumInstances,
-    kIncrementNumInstances,
-    kDecrementNumInstances,
-    kNumberOfMethods 
-};
+ enum {
+ kOpenDriver,
+ kCloseDriver,
+ kReadMSR,
+ kReadMSRGroup,
+ kReadMultiMSRGroup,
+ kWriteMSR,
+ kBuildTopology,
+ kGetNumInstances,
+ kIncrementNumInstances,
+ kDecrementNumInstances,
+ // PCI functions
+ kRead,
+ kWrite,
+ kMapMemory,
+ kUnmapMemory,
+ kReadMemory,
+ kNumberOfMethods
+ };
 */
 #endif

@@ -48,6 +48,12 @@ protected:
     static IOReturn sReadMSR(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* args);
     virtual IOReturn readMSR(pcm_msr_data_t* idata, pcm_msr_data_t* odata);
     
+    static IOReturn sReadMSRGroup(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* args);
+    virtual IOReturn readMSRGroup(pcm_msr_group_data_t* idata, pcm_msr_group_data_t* odata);
+
+    static IOReturn sReadMultiMSRGroup(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* args);
+    virtual IOReturn readMultiMSRGroup(pcm_multi_msr_group_data_t* idata, pcm_multi_msr_group_data_t* odata);
+    
     static IOReturn sWriteMSR(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* args);
     virtual IOReturn writeMSR(pcm_msr_data_t* data);
     

@@ -47,7 +47,8 @@ class MsrHandle
 
 public:
     MsrHandle(uint32 cpu);
-    int32 read(uint64 msr_number, uint64 * value);
+    int32 read(uint64 msr_number, uint64 *value);
+    int32 readGroup(uint16_t num_cpus, uint16_t offset, uint64_t msr_num, uint64_t *value);
     int32 write(uint64 msr_number, uint64 value);
     uint32 getCoreId() { return cpu_id; }
 #ifdef __APPLE__

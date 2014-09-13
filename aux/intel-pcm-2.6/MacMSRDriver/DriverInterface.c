@@ -54,7 +54,6 @@ kern_return_t closeMSRClient(io_connect_t connect)
 
 kern_return_t readMSR(io_connect_t connect, pcm_msr_data_t* idata, size_t* idata_size,pcm_msr_data_t* odata, size_t* odata_size)
 {
-
 	kern_return_t	kernResult;
 #if !defined(__LP64__)
 	if (IOConnectCallStructMethod != NULL) {
@@ -64,6 +63,38 @@ kern_return_t readMSR(io_connect_t connect, pcm_msr_data_t* idata, size_t* idata
 	}
 	else {
 		kernResult = IOConnectMethodStructIStructO(connect, kReadMSR, *idata_size, odata_size, idata, odata);
+	}
+#endif
+    return kernResult;
+}
+
+kern_return_t readMSRGroup(io_connect_t connect, pcm_msr_group_data_t* idata, size_t *idata_size, pcm_msr_group_data_t* odata, size_t* odata_size)
+{
+	kern_return_t	kernResult;
+#if !defined(__LP64__)
+	if (IOConnectCallStructMethod != NULL) {
+#endif
+		kernResult = IOConnectCallStructMethod(connect,	kReadMSRGroup, idata, *idata_size, odata, odata_size);
+#if !defined(__LP64__)
+	}
+	else {
+		kernResult = IOConnectMethodStructIStructO(connect, kReadMSRGroup, *idata_size, odata_size, idata, odata);
+	}
+#endif
+    return kernResult;
+}
+
+kern_return_t readMultiMSRGroup(io_connect_t connect, pcm_multi_msr_group_data_t* idata, size_t *idata_size, pcm_multi_msr_group_data_t* odata, size_t *odata_size)
+{
+	kern_return_t	kernResult;
+#if !defined(__LP64__)
+	if (IOConnectCallStructMethod != NULL) {
+#endif
+		kernResult = IOConnectCallStructMethod(connect,	kReadMultiMSRGroup, idata, *idata_size, odata, odata_size);
+#if !defined(__LP64__)
+	}
+	else {
+		kernResult = IOConnectMethodStructIStructO(connect, kReadMultiMSRGroup, *idata_size, odata_size, idata, odata);
 	}
 #endif
     return kernResult;

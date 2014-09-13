@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c \
+  /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrDriver.build/DerivedSources/PcmMsrDriver_info.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/mach/mach_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdint.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/cdefs.h \

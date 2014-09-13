@@ -1,14 +1,11 @@
 
 #include "Plugin.h"
-#include "syshooks/syshook-malloc.h"
-#include "syshooks/syshook-io.h"
 
 #include "Func.h"
 #include "Stats.h"
 #include "Stmt.h"
 
 #include <dlfcn.h>
-#include <papi.h>
 #include <iostream>
 #include <fstream>
 
@@ -16,18 +13,26 @@ namespace plugin { namespace Instrumentation { Plugin plugin; } }
 
 using namespace plugin::Instrumentation;
 
-double Plugin::_network_time = 0.0;
-
-static int _papi_event_set = 0;
-static double _last_network_update = 0.0;
+// A few counters to handle updates for various counters / time-based statistics
+static double _last_stats_update = 0.0;
 static double _stats_timer = 0.0;
-static uint64_t _last_count = 0;
+static uint64_t _last_stats_count = 0;
 static uint64_t _stats_count = 0;
+
 static std::string _stats_target = "";
 static std::ofstream _stats_ofstream;
 
-static PCM *_pcm_state;
-static SystemCounterState _original_state;
+static std::string _fdata_target = "";
+static std::ofstream _fdata_ofstream;
+
+static Plugin::CounterSet _original_state;
+
+static double _network_time;
+// transient state needed to keep track of counter start points while functions are executing
+static std::vector<Plugin::FunctionCounterSet> _counter_stack;
+// persistent counter state
+static std::map<std::string, Plugin::FunctionCounterSet> _counters;
+typedef std::map<std::string, Plugin::FunctionCounterSet>::iterator _counter_iterator;
 
 plugin::Configuration Plugin::Configure()
 	{
@@ -42,18 +47,18 @@ plugin::Configuration Plugin::Configure()
 void Plugin::HookUpdateNetworkTime(const double network_time)
 	{	
 	_network_time = network_time;
-	++_last_count;
+	++_last_stats_count;
 
 	// trigger on number of packets
-	if(_stats_count > 0 && _last_count >= _stats_count)
+	if(_stats_count > 0 && _last_stats_count >= _stats_count)
 		{
-			_last_count = 0;
+			_last_stats_count = 0;
 			WriteCollection();
 		}
 	// trigger on network timestamps
-	else if(_stats_timer > 0.001 && network_time - _last_network_update > _stats_timer) 
+	else if(_stats_timer > 0.001 && network_time - _last_stats_update > _stats_timer) 
 		{
-			_last_network_update = network_time;
+			_last_stats_update = network_time;
 			WriteCollection();
 		}
 	}
@@ -66,13 +71,6 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
     // printf("Executing bro method: %s\n", func->Name());
     std::vector<Func::Body> bodies = func->GetBodies();
-
-    /*
-    SegmentProfiler(segment_logger, func->GetLocationInfo());
-
-    if ( sample_logger )
-        sample_logger->FunctionSeen(func);
-	*/
 
     if ( bodies.empty() )
         {
@@ -95,16 +93,6 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
     g_frame_stack.push_back(f); // used for backtracing
 
-    /*
-    if ( g_trace_state.DoTrace() )
-        {
-        ODesc d;
-        func->DescribeDebug(&d, args);
-
-        g_trace_state.LogTrace("%s called: %s\n",
-            func->FType()->FlavorString().c_str(), d.Description());
-        }
-    */
     loop_over_list(*args, i)
         f->SetElement(i, (*args)[i]);
 
@@ -114,17 +102,26 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
     for ( size_t i = 0; i < bodies.size(); ++i )
         {
-        /*
-        if ( sample_logger )
-            sample_logger->LocationSeen(
-                bodies[i].stmts->GetLocationInfo());
-		*/
 
         Unref(result);
 
         try
             {
+            _counter_stack.push_back(Plugin::FunctionCounterSet::Create());
             result = bodies[i].stmts->Exec(f, flow);
+            FunctionCounterSet result = Plugin::FunctionCounterSet::Create() - _counter_stack.back();
+            _counter_stack.pop_back();
+            const Location* loc = bodies[i].stmts->GetLocationInfo();
+            char sbuf[4096];
+            snprintf(sbuf, 4096, "%s@%s:%d", func->Name(), loc->filename, loc->first_line);
+            if(_counters.find(sbuf) != _counters.end())
+	            {
+	            _counters[sbuf] = (_counters[sbuf] + result);
+    	        }
+    	    else
+    		    {
+    		    _counters[sbuf] = result;
+	    	    }
             }
 
         catch ( InterpreterException& e )
@@ -174,16 +171,7 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
     g_frame_stack.pop_back();
     Unref(f);
-    /*
-    if(result) {
-	    ODesc d;
-	    result->Describe(&d);
-	    printf("Method %s returned %p: %s\n", func->Name(), result, d.Bytes());    	
-    }
-    else {
-    	printf("Method %s returned NULL\n", func->Name());
-    }
-    */
+
     // hack: since the plugin architecture can't distinguish between a NULL returned by our method
     // and a NULL returned by a function, we rely on the plugin result handler to fix things for us.
     if(NULL == result) {
@@ -229,17 +217,9 @@ void Plugin::InitPreScript()
 	EnableHook(HOOK_UPDATE_NETWORK_TIME);
 	EnableHook(HOOK_CALL_FUNCTION);
 
-	_pcm_state = PCM::getInstance();
-	_pcm_state->program (PCM::DEFAULT_EVENTS, NULL);
-
-	if (_pcm_state->program() != PCM::Success)
-		{
-		reporter->Info("[instrumentation] unable to initialize PCM ...");
-		}
-
-	_original_state = getSystemCounterState();
-
 	reporter->Info("[instrumentation] initialization completed.\n");
+	_original_state.Read();
+
 	}
 
 void Plugin::SetCollectionTimer(const double target) 
@@ -256,47 +236,26 @@ void Plugin::SetCollectionTarget(const std::string target)
 	{
 	_stats_target = target;
 	_stats_ofstream.open(_stats_target);
-	// set up our stream ...
-	_stats_ofstream.setf(ios::fixed, ios::floatfield);
-	_stats_ofstream.setf(ios::showpoint);
-	_stats_ofstream.precision(6);
-	// write CSV headers
-	_stats_ofstream << "#fields"
-					<< " network_time malloc_count free_count malloc_sz fopen_count" 
-	                << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
-	                << " read_count fread_sz read_sz"
-	                << " instructions_retired l2_hit l2_miss l3_hit l3_miss mem_read mem_write"
-	                << std::endl;
-	_stats_ofstream << "#types" 
-					<< " double int int int int"
-					<< " int int int int int int"
-					<< " int int int int" 
-					<< " int int int int int int int"
-					<< std::endl;
-	_stats_ofstream << "#separator \\x20" << std::endl;
+	Plugin::FunctionCounterSet::ConfigWriter(_stats_ofstream);
+	}
+
+void Plugin::SetFunctionDataTarget(const std::string target)
+	{
+	_fdata_target = target;
+	_fdata_ofstream.open(_fdata_target);
+	Plugin::FunctionCounterSet::ConfigWriter(_fdata_ofstream);
+	}
+
+void Plugin::WriteFunctionData()
+	{
+
 	}
 
 void Plugin::WriteCollection()
 	{
 	assert(_stats_ofstream.good());
-	MemoryInfo info = GetMemoryCounts();
-	ReadWriteInfo rwinfo = GetReadWriteCounts();
-		// method call to be profiled goes here!
-	SystemCounterState curr_state = getSystemCounterState();
-
-	_stats_ofstream << _network_time << " " << info.malloc_count << " " << info.free_count << " ";
-	_stats_ofstream << info.malloc_sz << " " << rwinfo.fopen_count << " " << rwinfo.open_count << " ";
-	_stats_ofstream << rwinfo.fwrite_count << " " << rwinfo.write_count << " " << rwinfo.fwrite_sz << " ";
-	_stats_ofstream << rwinfo.write_sz << " " << rwinfo.fread_count << " " << rwinfo.read_count << " ";
-	_stats_ofstream << rwinfo.fread_sz << " " << rwinfo.read_sz;
-	_stats_ofstream << getInstructionsRetired(_original_state, curr_state) << " " 
-	                << getL2CacheHits(_original_state, curr_state) << " "
-	                << getL2CacheMisses(_original_state, curr_state) << " "
-	                << getL3CacheHits(_original_state, curr_state) << " "
-	                << getL3CacheMisses(_original_state, curr_state) << " "
-	                << getBytesReadFromMC(_original_state, curr_state) << " "
-	                << getBytesWrittenToMC(_original_state, curr_state) << "\n";
-
+	Plugin::FunctionCounterSet set = Plugin::FunctionCounterSet::Create();
+	set.Write(_stats_ofstream);
 	}
 
 void Plugin::FlushCollection()
@@ -304,3 +263,79 @@ void Plugin::FlushCollection()
 	assert(_stats_ofstream.good());
 	_stats_ofstream.flush();
 	}
+
+Plugin::FunctionCounterSet Plugin::FunctionCounterSet::Create()
+	{
+	FunctionCounterSet set;
+	set.memory = GetMemoryCounts();
+	set.io = GetReadWriteCounts();
+	set.network_time = _network_time;
+	set.perf.Read();
+	return set;
+	}
+
+void Plugin::FunctionCounterSet::ConfigWriter(ofstream& target)
+	{
+	target.setf(ios::fixed, ios::floatfield);
+	target.setf(ios::showpoint);
+	target.precision(6);
+
+	target << "#fields"
+		   << " network_time name location count"
+		   << " malloc_count free_count malloc_sz fopen_count" 
+	       << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
+	       << " read_count fread_sz read_sz"
+	       << " cycles"
+	       << std::endl;
+
+	target << "#types" 
+		   << " double \"string\" \"string\" int"
+		   << " int int int int"
+		   << " int int int int int int"
+		   << " int int int int" 
+		   << " int"
+		   << std::endl;
+	}
+
+void Plugin::FunctionCounterSet::Write(ofstream& target)
+	{
+	target << network_time << " \"" << name << "\" \"" << location << "\" " << count; 
+	target << memory.malloc_count << " " << memory.free_count << " ";
+	target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
+	target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
+	target << io.write_sz << " " << io.fread_count << " " << io.read_count << " ";
+	target << io.fread_sz << " " << io.read_sz << " ";
+	Plugin::CounterSet tmp = perf - _original_state;
+	target << perf.cycles << "\n";
+	}
+
+void Plugin::CounterSet::Read()
+	{
+	#if defined(__amd64__) || defined(__i686__)
+        uint32 high = 0, low = 0;
+        uint32 cpu1, cpu2, cpu3, cpu4;
+        // serializing instruction
+        // all registers may be modified.  load 0 into EAX to fetch vendor string.
+        asm volatile("cpuid" : /*no output*/ : "a"(0) : "eax", "ebx", "ecx", "edx");
+        // read cycle count
+        asm volatile("rdtsc" : "=a" (low), "=d" (high));
+        this->cycles = ((uint64_t(high) << uint64_t(32)) | low);
+    #else
+		#warning "[instrumentation] Unsupported platform: cycles will always be 0!"
+        this->cycles = 0;
+	#endif
+	}
+
+Plugin::CounterSet Plugin::CounterSet::operator+ (const CounterSet& c2)
+{
+	Plugin::CounterSet tmp;
+	tmp.cycles = this->cycles + c2.cycles;
+	return tmp;
+}
+
+Plugin::CounterSet Plugin::CounterSet::operator- (const CounterSet& c2)
+{
+	Plugin::CounterSet tmp;
+	tmp.cycles = this->cycles - c2.cycles;
+	return tmp;
+}

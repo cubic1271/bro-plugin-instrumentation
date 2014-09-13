@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp \
+  /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/PcmMsr.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOLib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/sys/cdefs.h \
@@ -141,7 +141,7 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/kern/thread_call.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/sysctl.h \
-  /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/PcmMsr.h \
+  /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/PcmMsr.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOService.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IORegistryEntry.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/libkern/c++/OSContainers.h \
@@ -171,4 +171,4 @@ dependencies: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/pwr_mgt/IOPM.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOMessage.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Kernel.framework/Headers/IOKit/IOServicePM.h \
-  /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
+  /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h

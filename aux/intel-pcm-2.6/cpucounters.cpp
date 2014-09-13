@@ -100,11 +100,13 @@ public:
         globalMutex = CreateMutex(NULL, FALSE,
                                   L"Global\\Intel(r) Performance Counter Monitor instance create/destroy lock");
         // lock
+        printf("Acquiring lock ...\n");
         WaitForSingleObject(globalMutex, INFINITE);
     }
     ~SystemWideLock()
     {
         // unlock
+        printf("Releasing lock ...\n");
         ReleaseMutex(globalMutex);
     }
 };
@@ -782,6 +784,7 @@ PCM::PCM() :
 #endif
         #endif //end of ifdef _MSC_VER
 
+    /*
     std::cout << "Number of physical cores: " << (num_cores/threads_per_core) << std::endl;
     std::cout << "Number of logical cores: " << num_cores << std::endl;
     std::cout << "Threads (logical cores) per physical core: " << threads_per_core << std::endl;
@@ -794,6 +797,7 @@ PCM::PCM() :
         std::cout << "Number of core PMU fixed counters: " << core_fixed_counter_num_max << std::endl;
         std::cout << "Width of fixed counters: " << core_fixed_counter_width << " bits" << std::endl;
     }
+    */
 
     socketRefCore.resize(num_sockets);
 	
@@ -859,7 +863,7 @@ PCM::PCM() :
 		return;
         }
 
-        std::cout << "Nominal core frequency: " << nominal_frequency << " Hz" << std::endl;
+        // std::cout << "Nominal core frequency: " << nominal_frequency << " Hz" << std::endl;
     }
 
     if(packageEnergyMetricsAvailable() && MSR)
@@ -878,9 +882,9 @@ PCM::PCM() :
         pkgMinimumPower = (uint32) (double(extract_bits(package_power_info, 16, 30))*wattsPerPowerUnit);
         pkgMaximumPower = (uint32) (double(extract_bits(package_power_info, 32, 46))*wattsPerPowerUnit);
 
-        std::cout << "Package thermal spec power: "<< pkgThermalSpecPower << " Watt; ";
-        std::cout << "Package minimum power: "<< pkgMinimumPower << " Watt; ";
-        std::cout << "Package maximum power: "<< pkgMaximumPower << " Watt; " << std::endl;
+        // std::cout << "Package thermal spec power: "<< pkgThermalSpecPower << " Watt; ";
+        // std::cout << "Package minimum power: "<< pkgMinimumPower << " Watt; ";
+        // std::cout << "Package maximum power: "<< pkgMaximumPower << " Watt; " << std::endl;
 
         if(snb_energy_status.empty())
 	    for (i = 0; i < num_sockets; ++i)
@@ -1166,7 +1170,7 @@ PCM::ErrorCode PCM::program(PCM::ProgramMode mode_, void * parameter_)
     }
     if (prevValue > 0)  // already programmed since another instance exists
     {
-        std::cout << "Number of PCM instances: " << (prevValue + 1) << std::endl;
+        // std::cout << "Number of PCM instances: " << (prevValue + 1) << std::endl;
         if (hasPCICFGUncore() && server_pcicfg_uncore && server_pcicfg_uncore[0] && qpi_speed==0)
             qpi_speed = server_pcicfg_uncore[0]->computeQPISpeed();
 
@@ -1193,7 +1197,7 @@ PCM::ErrorCode PCM::program(PCM::ProgramMode mode_, void * parameter_)
 
     if (curValue > 1)  // already programmed since another instance exists
     {
-        std::cout << "Number of PCM instances: " << curValue << std::endl;
+        // std::cout << "Number of PCM instances: " << curValue << std::endl;
         if (hasPCICFGUncore() && server_pcicfg_uncore && server_pcicfg_uncore[0] && qpi_speed==0)
             qpi_speed = server_pcicfg_uncore[0]->computeQPISpeed();
 

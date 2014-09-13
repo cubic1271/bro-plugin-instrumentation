@@ -38,8 +38,24 @@ After bro has been linked, use 'otool' (on OS/X) or 'ldd' (on Linux / FreeBSD) t
 
 ### Using ###
 
-The plugin can collect information in three different forms:
+This plugin can collect information in three different forms:
 
 * Dump a collection of statistics after observing X packets / after Y seconds have elapsed.  This is enabled via the Instrumentation::(Set)?Collection* set of methods.
 * _TODO_: Track statistics per-function / per-event.  This is enabled via the Instrumentation::(Set)?Function* set of methods.
 * _TODO_: Build call-graphs (meant to be parsed by the graphviz 'dot' utility) to visualize what the code is doing.  This is enabled via the Instrumentation::(Set)?CallGraph* set of methods.
+
+An example of writing statistics to a file called '/tmp/collection.out' for every 10000 observed packets:
+
+```
+event bro_init() {
+	# Write a new statistics line once for every 10000 packets we see ...
+    Instrumentation::SetCollectionCount(10000);
+    # ... to the file '/tmp/collection.out'
+    Instrumentation::SetCollectionTarget("/tmp/collection.out");
+}
+
+event bro_done() {
+	# Make sure everything has been written to the collection file since we're getting ready to exit
+    Instrumentation::CollectionFlush();
+}
+```

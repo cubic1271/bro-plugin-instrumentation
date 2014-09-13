@@ -100,11 +100,13 @@ public:
         globalMutex = CreateMutex(NULL, FALSE,
                                   L"Global\\Intel(r) Performance Counter Monitor instance create/destroy lock");
         // lock
+        printf("Acquiring lock ...\n");
         WaitForSingleObject(globalMutex, INFINITE);
     }
     ~SystemWideLock()
     {
         // unlock
+        printf("Releasing lock ...\n");
         ReleaseMutex(globalMutex);
     }
 };
@@ -1127,6 +1129,7 @@ perf_event_attr PCM_init_perf_event_attr()
 
 PCM::ErrorCode PCM::program(PCM::ProgramMode mode_, void * parameter_)
 {
+    std::cout << "Programming PCM ..." << std::endl;
     SystemWideLock lock;
     if (!MSR) return PCM::MSRAccessDenied;
     
@@ -1189,13 +1192,15 @@ PCM::ErrorCode PCM::program(PCM::ProgramMode mode_, void * parameter_)
     int curValue = 0;
     sem_getvalue(numInstancesSemaphore, &curValue);
 #else //if it is apple
+    std::cout << "Executing semaphore magic ..." << std::endl;
+
     uint32 curValue = PCM::incrementNumInstances();
     sem_post(numInstancesSemaphore);
 #endif // end ifndef __APPLE__
 
     if (curValue > 1)  // already programmed since another instance exists
     {
-        // std::cout << "Number of PCM instances: " << curValue << std::endl;
+        std::cout << "Number of PCM instances: " << curValue << std::endl;
         if (hasPCICFGUncore() && server_pcicfg_uncore && server_pcicfg_uncore[0] && qpi_speed==0)
             qpi_speed = server_pcicfg_uncore[0]->computeQPISpeed();
 
@@ -1224,10 +1229,12 @@ numInst<=1 && canUsePerf==true -> we are first, perf will be used, *dont check*,
 #endif   
     if (PMUinUse())
     {
+        std::cout << "Unable to program PCM: device in use" << std::endl;
         decrementInstanceSemaphore();
         return PCM::PMUBusy;
     }
 
+    std::cout << "Setting PCM mode ... (" << mode_ << ")" << std::endl;
     mode = mode_;
     
     // copy custom event descriptions

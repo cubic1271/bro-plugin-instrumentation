@@ -25,6 +25,8 @@ const IOExternalMethodDispatch PcmMsrClientClassName::sMethods[kNumberOfMethods]
     { (IOExternalMethodAction) &PcmMsrClientClassName::sOpenDriver, 0, 0, 0, 0},
     { (IOExternalMethodAction) &PcmMsrClientClassName::sCloseDriver, 0, 0, 0, 0},
     { (IOExternalMethodAction) &PcmMsrClientClassName::sReadMSR, 0, kIOUCVariableStructureSize, 0, kIOUCVariableStructureSize},
+    { (IOExternalMethodAction) &PcmMsrClientClassName::sReadMSRGroup, 0, kIOUCVariableStructureSize, 0, kIOUCVariableStructureSize},
+    { (IOExternalMethodAction) &PcmMsrClientClassName::sReadMultiMSRGroup, 0, kIOUCVariableStructureSize, 0, kIOUCVariableStructureSize},
     { (IOExternalMethodAction) &PcmMsrClientClassName::sWriteMSR, 0, kIOUCVariableStructureSize, 0, 0},
     { (IOExternalMethodAction) &PcmMsrClientClassName::sBuildTopology, 0, 0, 0, kIOUCVariableStructureSize},
     { (IOExternalMethodAction) &PcmMsrClientClassName::sGetNumInstances, 0, 0, 1, 0},
@@ -145,6 +147,34 @@ IOReturn PcmMsrClientClassName::readMSR(pcm_msr_data_t* idata, pcm_msr_data_t* o
     
     if (result == kIOReturnSuccess)
  		result = fProvider->readMSR(idata, odata);
+    
+    return result;
+}
+
+IOReturn PcmMsrClientClassName::sReadMSRGroup(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* arguments){
+    return target->readMSRGroup((pcm_msr_group_data_t*) arguments->structureInput, (pcm_msr_group_data_t*) arguments->structureOutput);
+}
+
+IOReturn PcmMsrClientClassName::readMSRGroup(pcm_msr_group_data_t* idata, pcm_msr_group_data_t* odata)
+{
+    IOReturn	result = checkActiveAndOpened (__FUNCTION__);
+    
+    if (result == kIOReturnSuccess)
+    result = fProvider->readMSRGroup(idata, odata);
+    
+    return result;
+}
+
+IOReturn PcmMsrClientClassName::sReadMultiMSRGroup(PcmMsrClientClassName* target, void* reference, IOExternalMethodArguments* arguments){
+    return target->readMultiMSRGroup((pcm_multi_msr_group_data_t*) arguments->structureInput, (pcm_multi_msr_group_data_t*) arguments->structureOutput);
+}
+
+IOReturn PcmMsrClientClassName::readMultiMSRGroup(pcm_multi_msr_group_data_t* idata, pcm_multi_msr_group_data_t* odata)
+{
+    IOReturn	result = checkActiveAndOpened (__FUNCTION__);
+    
+    if (result == kIOReturnSuccess)
+    result = fProvider->readMultiMSRGroup(idata, odata);
     
     return result;
 }

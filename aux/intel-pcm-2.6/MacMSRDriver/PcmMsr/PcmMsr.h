@@ -24,6 +24,8 @@ public:
     
     virtual IOReturn writeMSR(pcm_msr_data_t* data);
     virtual IOReturn readMSR(pcm_msr_data_t* idata,pcm_msr_data_t* odata);
+    virtual IOReturn readMSRGroup(pcm_msr_group_data_t* idata, pcm_msr_group_data_t* odata);
+    virtual IOReturn readMultiMSRGroup(pcm_multi_msr_group_data_t* idata, pcm_multi_msr_group_data_t* odata);
     virtual IOReturn buildTopology(topologyEntry* odata, uint32_t input_num_cores);
     virtual bool init(OSDictionary *dict);
     virtual void free(void);

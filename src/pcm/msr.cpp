@@ -174,6 +174,14 @@ int32 MsrHandle::read(uint64 msr_number, uint64 * value){
     return driver->read(cpu_id, msr_number, value);
 }
 
+int32 MsrHandle::readGroup(uint16_t num_cpus, uint16_t offset, uint64_t msr_num, uint64_t *value){
+    return driver->readGroup(num_cpus, offset, msr_num, value);
+}
+
+int32 MsrHandle::readMultiGroup(uint16_t num_cpus, uint16_t offset, uint32_t num_msrs, uint64_t *msr, uint64_t *value){
+	return driver->readMultiGroup(num_cpus, offset, num_msrs, msr, value);
+}
+
 int32 MsrHandle::buildTopology(uint32 num_cores, void* ptr){
     return driver->buildTopology(num_cores, ptr);
 }

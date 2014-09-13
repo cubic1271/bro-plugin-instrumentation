@@ -52,6 +52,8 @@
 		81ADBF1B156EFF56006D9B47 /* MSRAccessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRAccessor.h; sourceTree = "<group>"; };
 		81ADBF1C156EFF69006D9B47 /* MSRAccessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSRAccessor.cpp; sourceTree = "<group>"; };
 		81DEAF6515703946005E8EC6 /* DriverInterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DriverInterface.c; sourceTree = "<group>"; };
+		81F6CB5619C0F31300C3683D /* MSRAccessorPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRAccessorPublic.h; sourceTree = "<group>"; };
+		81F6CB5719C0F31300C3683D /* MSRKernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSRKernel.h; sourceTree = "<group>"; };
 		81F91BBC156D9BF8007DD788 /* PcmMsrDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PcmMsrDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F91BC3156D9BF8007DD788 /* PcmMsr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PcmMsr-Info.plist"; sourceTree = "<group>"; };
 		81F91BC5156D9BF8007DD788 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 			children = (
 				81ADBF17156EECDA006D9B47 /* DriverInterface.h */,
 				81DEAF6515703946005E8EC6 /* DriverInterface.c */,
+				81F6CB5619C0F31300C3683D /* MSRAccessorPublic.h */,
+				81F6CB5719C0F31300C3683D /* MSRKernel.h */,
 				81ADBF1B156EFF56006D9B47 /* MSRAccessor.h */,
 				81ADBF1C156EFF69006D9B47 /* MSRAccessor.cpp */,
 				895805FA1760E6E5006ED117 /* PCIDriverInterface.cpp */,

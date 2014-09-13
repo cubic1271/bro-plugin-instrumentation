@@ -58,7 +58,7 @@ class SocketCounterState;
 class CoreCounterState;
 class BasicCounterState;
 class ServerUncorePowerState;
-class PCM;
+struct PCM;
 
 /*
         CPU performance monitoring routines
@@ -168,7 +168,7 @@ public:
 class PCIeCounterState
 {
     friend uint64 getNumberOfEvents(PCIeCounterState before, PCIeCounterState after);
-    friend class PCM;
+    friend struct PCM;
     uint64 data;
 public:
     PCIeCounterState(): data(0)
@@ -192,7 +192,8 @@ template class INTELPCM_API std::allocator<char>;
         This singleton object needs to be instantiated for each process
         before accessing counting and measuring routines
 */
-class INTELPCM_API PCM
+// just make it public so that we don't have to deal with visibility
+struct INTELPCM_API PCM
 {
     friend class BasicCounterState;
     friend class UncoreCounterState;
@@ -790,7 +791,7 @@ public:
 //! Intended only for derivation, but not for the direct use
 class BasicCounterState
 {
-    friend class PCM;
+    friend struct PCM;
     template <class CounterStateType>
     friend double getExecUsage(const CounterStateType & before, const CounterStateType & after);
     template <class CounterStateType>
@@ -835,6 +836,8 @@ class BasicCounterState
     friend uint64 getNumberOfCustomEvents(int32 eventCounterNr, const CounterStateType & before, const CounterStateType & after);
     template <class CounterStateType>
     friend uint64 getInvariantTSC(const CounterStateType & before, const CounterStateType & after);
+    template <class CounterStateType>
+    friend uint64 getRefCycles(const CounterStateType &now);
     template <class CounterStateType>
     friend uint64 getRefCycles(const CounterStateType & before, const CounterStateType & after);
     template <class CounterStateType>
@@ -897,6 +900,22 @@ public:
         return *this;
     }
 
+    BasicCounterState & operator -= (const BasicCounterState & o)
+    {
+        InstRetiredAny -= o.InstRetiredAny;
+        CpuClkUnhaltedThread -= o.CpuClkUnhaltedThread;
+        CpuClkUnhaltedRef -= o.CpuClkUnhaltedRef;
+        Event0 -= o.Event0;
+        Event1 -= o.Event1;
+        Event2 -= o.Event2;
+        Event3 -= o.Event3;
+        InvariantTSC -= o.InvariantTSC;
+        for(int i=0; i <= PCM::MAX_C_STATE ;++i)
+            CStateResidency[i] -= o.CStateResidency[i];
+        // ThermalHeadroom is not accumulative
+        return *this;
+    }
+
     //! Returns current thermal headroom below TjMax
    int32 getThermalHeadroom() const  { return ThermalHeadroom; }
 };
@@ -912,7 +931,7 @@ class ServerUncorePowerState
    uint64 PackageEnergyStatus;
    uint64 DRAMEnergyStatus;
    int32 PackageThermalHeadroom;
-   friend class PCM;
+   friend struct PCM;
    template <class CounterStateType>
    friend uint64 getQPIClocks(uint32 port, const CounterStateType & before, const CounterStateType & after);
    template <class CounterStateType>
@@ -1094,7 +1113,7 @@ double getDRAMConsumedJoules(const CounterStateType & before, const CounterState
 //! Intended only for derivation, but not for the direct use
 class UncoreCounterState
 {
-    friend class PCM;
+    friend struct PCM;
     template <class CounterStateType>
     friend uint64 getBytesReadFromMC(const CounterStateType & before, const CounterStateType & after);
     template <class CounterStateType>
@@ -1133,12 +1152,23 @@ public:
             CStateResidency[i] += o.CStateResidency[i];
         return *this;
     }
+
+    UncoreCounterState & operator -= (const UncoreCounterState & o)
+    {
+        UncMCFullWrites -= o.UncMCFullWrites;
+        UncMCNormalReads -= o.UncMCNormalReads;
+        PackageEnergyStatus -= o.PackageEnergyStatus;
+        DRAMEnergyStatus -= o.DRAMEnergyStatus;
+        for(int i=0; i <= PCM::MAX_C_STATE ;++i)
+            CStateResidency[i] -= o.CStateResidency[i];
+        return *this;        
+    }
 };
 
 //! \brief (Logical) core-wide counter state
 class CoreCounterState : public BasicCounterState
 {
-    friend class PCM;
+    friend struct PCM;
 
 public:
 };
@@ -1146,7 +1176,7 @@ public:
 //! \brief Socket-wide counter state
 class SocketCounterState : public BasicCounterState, public UncoreCounterState
 {
-    friend class PCM;
+    friend struct PCM;
 
 protected:
     void readAndAggregate(MsrHandle * handle)
@@ -1165,7 +1195,7 @@ public:
 //! \brief System-wide counter state
 class SystemCounterState : public BasicCounterState, public UncoreCounterState
 {
-    friend class PCM;
+    friend struct PCM;
     std::vector<std::vector<uint64> > incomingQPIPackets;
     std::vector<std::vector<uint64> > outgoingQPIIdleFlits;
     std::vector<std::vector<uint64> > outgoingQPIDataNonDataFlits;
@@ -1201,6 +1231,29 @@ public:
         BasicCounterState::operator += (o);
         UncoreCounterState::operator += (o);
     }
+
+    SystemCounterState operator+ (const SystemCounterState & o)
+    {
+        SystemCounterState tmp;
+        // *this + o
+        tmp.BasicCounterState::operator += (*this);
+        tmp.UncoreCounterState::operator += (*this);
+        tmp.BasicCounterState::operator += (o);
+        tmp.UncoreCounterState::operator += (o);
+        return tmp;
+    }
+
+    SystemCounterState operator- (const SystemCounterState & o)
+    {
+        SystemCounterState tmp;
+        // *this - o
+        tmp.BasicCounterState::operator += (*this);
+        tmp.UncoreCounterState::operator += (*this);
+        tmp.BasicCounterState::operator -= (o);
+        tmp.UncoreCounterState::operator -= (o);
+        return tmp;
+    }
+
 };
 
 /*! \brief Reads the counter state of the system
@@ -1324,6 +1377,12 @@ template <class CounterStateType>
 uint64 getRefCycles(const CounterStateType & before, const CounterStateType & after) // clocks
 {
     return after.CpuClkUnhaltedRef - before.CpuClkUnhaltedRef;
+}
+
+template <class CounterStateType>
+uint64 getRefCycles(const CounterStateType & now) // clocks
+{
+    return now.CpuClkUnhaltedRef;
 }
 
 /*! \brief Computes the number executed core clock cycles
