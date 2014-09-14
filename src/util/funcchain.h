@@ -89,18 +89,26 @@ private:
 
 class FunctionCallChain {
 public:
+	FunctionCallChain()
+	: edge(false) { }
+
 	typedef std::unordered_map<CallChain, uint64_t, CallChain::ChainHash> ChainContainer;
 	void add(uint32_t dst) {
 		active.add(dst);
+		edge = true;
 	}
 
 	void end() {
-		ChainContainer::iterator iter = chains.find(active);
-		if(iter == chains.end()) {
-			chains[active] = 1;
-		}
-		else {
-			iter->second++;
+		// only a new chain if we've added at least one entry since the last time we ended the chain
+		if(edge) {
+			ChainContainer::iterator iter = chains.find(active);
+			if(iter == chains.end()) {
+				chains[active] = 1;
+			}
+			else {
+				iter->second++;
+			}
+			edge = false;
 		}
 		active.pop();
 	}
@@ -115,7 +123,8 @@ public:
 		}
 		return items;
 	}
-
+private:
+	bool edge;	
 	CallChain active;
 	ChainContainer chains;
 };
