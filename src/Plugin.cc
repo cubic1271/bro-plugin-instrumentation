@@ -9,6 +9,8 @@
 #include <iostream>
 #include <fstream>
 
+#include "util/functable.h"
+
 namespace plugin { namespace Instrumentation { Plugin plugin; } }
 
 using namespace plugin::Instrumentation;
@@ -25,14 +27,16 @@ static std::ofstream _stats_ofstream;
 static std::string _fdata_target = "";
 static std::ofstream _fdata_ofstream;
 
-static Plugin::CounterSet _original_state;
+static CounterSet _original_state;
 
 static double _network_time;
 // transient state needed to keep track of counter start points while functions are executing
-static std::vector<Plugin::FunctionCounterSet> _counter_stack;
+static std::vector<FunctionCounterSet> _counter_stack;
 // persistent counter state
-static std::map<std::string, Plugin::FunctionCounterSet> _counters;
-typedef std::map<std::string, Plugin::FunctionCounterSet>::iterator _counter_iterator;
+static std::map<uint32_t, FunctionCounterSet> _counters;
+typedef std::map<uint32_t, FunctionCounterSet>::iterator _counter_iterator;
+
+static FunctionTable _function_table;
 
 plugin::Configuration Plugin::Configure()
 	{
@@ -76,11 +80,27 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
         {
         // Can only happen for events and hooks.
         assert(func->Flavor() == FUNC_FLAVOR_EVENT || func->Flavor() == FUNC_FLAVOR_HOOK);
-        loop_over_list(*args, i)
-            Unref((*args)[i]);
+        //happens in HandlePluginResult() ...
+        //loop_over_list(*args, i)
+        //    Unref((*args)[i]);
 
         return func->Flavor() == FUNC_FLAVOR_HOOK ? new Val(true, TYPE_BOOL) : 0;
         }
+
+
+    /*
+	FIXME: something is wrong here, but not yet sure what ...
+
+	HandlePluginResult has a blanket Unref(), but in the case that the arg list is
+	passed along to the frame when we make our call, it'll be Unref'd there as well.
+
+	Thus, Ref our arguments here so that the Unref in HandlePluginResult doesn't break
+	anything ...
+    */
+    {
+    loop_over_list(*args, i)
+    	Ref((*args)[i]);    	
+    }
 
     Frame* f = new Frame(func->FrameSize(), func, args);
 
@@ -107,20 +127,22 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
         try
             {
-            _counter_stack.push_back(Plugin::FunctionCounterSet::Create());
+            _counter_stack.push_back(FunctionCounterSet::Create(_network_time));
             result = bodies[i].stmts->Exec(f, flow);
-            FunctionCounterSet result = Plugin::FunctionCounterSet::Create() - _counter_stack.back();
+            FunctionCounterSet result = FunctionCounterSet::Create(_network_time) - _counter_stack.back();
+            result.count = 1;
             _counter_stack.pop_back();
             const Location* loc = bodies[i].stmts->GetLocationInfo();
-            char sbuf[4096];
-            snprintf(sbuf, 4096, "%s@%s:%d", func->Name(), loc->filename, loc->first_line);
-            std::string key = std::string(sbuf);
+
+            uint32_t key = _function_table.add(func, i, loc);
+
             if(_counters.find(key) != _counters.end())
 	            {
 	            _counters[key] = (_counters[key] + result);
     	        }
     	    else
     		    {
+    		    char sbuf[4096];
     		    _counters[key] = result;
     		    _counters[key].name = std::string(func->Name());
     		    snprintf(sbuf, 4096, "%s:%d", loc->filename, loc->first_line);
@@ -240,14 +262,14 @@ void Plugin::SetCollectionTarget(const std::string target)
 	{
 	_stats_target = target;
 	_stats_ofstream.open(_stats_target);
-	Plugin::FunctionCounterSet::ConfigWriter(_stats_ofstream);
+	FunctionCounterSet::ConfigWriter(_stats_ofstream);
 	}
 
 void Plugin::SetFunctionDataTarget(const std::string target)
 	{
 	_fdata_target = target;
 	_fdata_ofstream.open(_fdata_target);
-	Plugin::FunctionCounterSet::ConfigWriter(_fdata_ofstream);
+	FunctionCounterSet::ConfigWriter(_fdata_ofstream);
 	}
 
 void Plugin::WriteFunctionData()
@@ -263,7 +285,7 @@ void Plugin::WriteFunctionData()
 void Plugin::WriteCollection()
 	{
 	assert(_stats_ofstream.good());
-	Plugin::FunctionCounterSet set = Plugin::FunctionCounterSet::Create();
+	FunctionCounterSet set = FunctionCounterSet::Create(_network_time);
 	set.Write(_stats_ofstream);
 	}
 
@@ -273,78 +295,3 @@ void Plugin::FlushCollection()
 	_stats_ofstream.flush();
 	}
 
-Plugin::FunctionCounterSet Plugin::FunctionCounterSet::Create()
-	{
-	FunctionCounterSet set;
-	set.memory = GetMemoryCounts();
-	set.io = GetReadWriteCounts();
-	set.network_time = _network_time;
-	set.perf.Read();
-	return set;
-	}
-
-void Plugin::FunctionCounterSet::ConfigWriter(ofstream& target)
-	{
-	target.setf(ios::fixed, ios::floatfield);
-	target.setf(ios::showpoint);
-	target.precision(6);
-
-	target << "#fields"
-		   << " network_time name location count"
-		   << " malloc_count free_count malloc_sz fopen_count" 
-	       << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
-	       << " read_count fread_sz read_sz"
-	       << " cycles"
-	       << std::endl;
-
-	target << "#types" 
-		   << " double \"string\" \"string\" int"
-		   << " int int int int"
-		   << " int int int int int int"
-		   << " int int int int" 
-		   << " int"
-		   << std::endl;
-	}
-
-void Plugin::FunctionCounterSet::Write(ofstream& target)
-	{
-	target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
-	target << memory.malloc_count << " " << memory.free_count << " ";
-	target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
-	target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
-	target << io.write_sz << " " << io.fread_count << " " << io.read_count << " ";
-	target << io.fread_sz << " " << io.read_sz << " ";
-	Plugin::CounterSet tmp = perf - _original_state;
-	target << perf.cycles << "\n";
-	}
-
-void Plugin::CounterSet::Read()
-	{
-	#if defined(__amd64__) || defined(__i686__)
-        uint32 high = 0, low = 0;
-        uint32 cpu1, cpu2, cpu3, cpu4;
-        // serializing instruction
-        // all registers may be modified.  load 0 into EAX to fetch vendor string.
-        asm volatile("cpuid" : /*no output*/ : "a"(0) : "eax", "ebx", "ecx", "edx");
-        // read cycle count
-        asm volatile("rdtsc" : "=a" (low), "=d" (high));
-        this->cycles = ((uint64_t(high) << uint64_t(32)) | low);
-    #else
-		#warning "[instrumentation] Unsupported platform: cycles will always be 0!"
-        this->cycles = 0;
-	#endif
-	}
-
-Plugin::CounterSet Plugin::CounterSet::operator+ (const CounterSet& c2)
-{
-	Plugin::CounterSet tmp;
-	tmp.cycles = this->cycles + c2.cycles;
-	return tmp;
-}
-
-Plugin::CounterSet Plugin::CounterSet::operator- (const CounterSet& c2)
-{
-	Plugin::CounterSet tmp;
-	tmp.cycles = (this->cycles > c2.cycles) ? this->cycles - c2.cycles : 0;
-	return tmp;
-}
