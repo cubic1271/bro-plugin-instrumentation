@@ -146,7 +146,7 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
     		    _counters[key] = result;
     		    _counters[key].name = std::string(func->Name());
     		    snprintf(sbuf, 4096, "%s:%d", loc->filename, loc->first_line);
-    		    _counters[key].location = std::string(sbuf);
+    		    _counters[key].location = FunctionTable::beautify(std::string(sbuf));
 	    	    }
             }
 

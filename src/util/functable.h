@@ -98,6 +98,41 @@ public:
 		functions.clear(); 
 	}
 
+	static std::string beautify(std::string path)
+	{
+		char *state;
+		char *cpath = strdup(path.c_str());
+		char *token = "/";
+		std::vector<std::string> components;
+		char *result = strtok_r(cpath, token, &state);
+		while(result != NULL) {
+			if(result[0] != '.') {
+				components.push_back(result);				
+			} 
+
+			result = strtok_r(NULL, token, &state);
+		}
+
+		int cutoff = 0;
+		for(int i = components.size() - 1; i >= 0; --i) {
+			if(!cutoff) {
+				if(components[i] == "bro" || components[i] == "base") {
+					cutoff = i;
+				}
+			}
+		}
+
+		std::string output = "";
+		for(int i = cutoff; i < components.size(); ++i) {
+			output += components[i];
+			if(i < components.size() - 1) {
+				output += "/";
+			}
+		}
+		free(cpath);
+		return output;
+	}
+
 private:
 	std::vector<std::vector<FunctionEntry> > functions;
 };
