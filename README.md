@@ -8,12 +8,11 @@ The bro instrumentation plugin is composed of a few parts:
 * A few syshook libraries that may either be loaded via LD_PRELOAD (on Linux / *BSD) or compiled into the project via the appropriate flags (on OS/X).
 * A bro plugin that periodically grabs statistics from the syshook libraries (along with other statistics it keeps internally) and writes them to a CSV file.
 
-Currently, only Intel CPUs supported by Intel's PCM library will report instruction counts / cache statistics.  This is because OS/X doesn't play nicely with PAPI.
+There's code in here to support lower-level statistics (cache, others) via Intel PCM, but there are cross-platform considerations that make this trickier than it would be otherwise.  As such, supporting these is a TODO item.
 
 ### Building ###
 
 * build the syshook shared libraries (via 'make preload')
-* OS/X: set up Intel PCM (in aux/intel-pcm-2.6: consult the HOWTO there for details)
 * make and install the plugin (via 'make install')
 
 It is recommended that (and, on OS/X, required that) the syshook libraries are linked into the build process when the bro binary is constructed instead of being loaded via LD_PRELOAD.  To do this, begin by ensuring that there is *no existing build/ directory in the bro source tree*.  Next, set the following environment variable:
@@ -41,7 +40,7 @@ After bro has been linked, use 'otool' (on OS/X) or 'ldd' (on Linux / FreeBSD) t
 This plugin can collect information in three different forms:
 
 * Dump a collection of statistics after observing X packets / after Y seconds have elapsed.  This is enabled via the Instrumentation::(Set)?Collection* set of methods.
-* _TODO_: Track statistics per-function / per-event.  This is enabled via the Instrumentation::(Set)?Function* set of methods.
+* Track statistics per-function / per-event.  This is enabled via the Instrumentation::(Set)?Function* set of methods.
 * _TODO_: Build call-graphs (meant to be parsed by the graphviz 'dot' utility) to visualize what the code is doing.  This is enabled via the Instrumentation::(Set)?CallGraph* set of methods.
 
 An example of writing statistics to a file called '/tmp/collection.out' for every 10000 observed packets:
@@ -59,3 +58,8 @@ event bro_done() {
     Instrumentation::CollectionFlush();
 }
 ```
+
+### Notes ###
+
+At the moment, function data is tracked via a map.  This is not efficient.  A better implementation might e.g. use a vector and index directly by the function IDs.  This may be coming in a future version of the code.
+
