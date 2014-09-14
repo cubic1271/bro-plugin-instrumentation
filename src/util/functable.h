@@ -84,13 +84,18 @@ public:
 		// NOTE: caps max number of functions to 24 bits, and
 		// max number of offsets to 8 bits
 
-		return ( (func_id & 0xFFFFFF) << 24) | (offset & 0xFF);
+		return ( (func_id & 0xFFFFFF) << 8) | (offset & 0xFF);
 	}
 
 	const FunctionEntry& lookup(const Func* func, uint32_t offset) 
 	{ 
 		uint32_t func_id = func->GetUniqueFuncID();
 		return functions[func_id][offset];
+	}
+
+	const FunctionEntry& lookup(uint32_t key)
+	{
+		return functions[((key & 0xFFFFFF00) >> 8)][key & 0xFF];
 	}
 
 	void reset() 

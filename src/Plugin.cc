@@ -10,6 +10,7 @@
 #include <fstream>
 
 #include "util/functable.h"
+#include "util/funcchain.h"
 
 namespace plugin { namespace Instrumentation { Plugin plugin; } }
 
@@ -27,6 +28,9 @@ static std::ofstream _stats_ofstream;
 static std::string _fdata_target = "";
 static std::ofstream _fdata_ofstream;
 
+static std::string _fchain_target = "";
+static std::ofstream _fchain_ofstream;
+
 static CounterSet _original_state;
 
 static double _network_time;
@@ -37,6 +41,7 @@ static std::map<uint32_t, FunctionCounterSet> _counters;
 typedef std::map<uint32_t, FunctionCounterSet>::iterator _counter_iterator;
 
 static FunctionTable _function_table;
+static FunctionCallChain _function_chains;
 
 plugin::Configuration Plugin::Configure()
 	{
@@ -127,14 +132,16 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
         try
             {
+            const Location* loc = bodies[i].stmts->GetLocationInfo();
+            uint32_t key = _function_table.add(func, i, loc);
+
             _counter_stack.push_back(FunctionCounterSet::Create(_network_time));
+            _function_chains.add(key);
             result = bodies[i].stmts->Exec(f, flow);
             FunctionCounterSet result = FunctionCounterSet::Create(_network_time) - _counter_stack.back();
             result.count = 1;
             _counter_stack.pop_back();
-            const Location* loc = bodies[i].stmts->GetLocationInfo();
-
-            uint32_t key = _function_table.add(func, i, loc);
+            _function_chains.end();
 
             if(_counters.find(key) != _counters.end())
 	            {
@@ -270,6 +277,40 @@ void Plugin::SetFunctionDataTarget(const std::string target)
 	_fdata_target = target;
 	_fdata_ofstream.open(_fdata_target);
 	FunctionCounterSet::ConfigWriter(_fdata_ofstream);
+	}
+
+void Plugin::SetChainDataTarget(const std::string target)
+	{
+	_fchain_target = target;
+	_fchain_ofstream.open(_fchain_target);
+	}
+
+void Plugin::WriteChainData()
+	{
+	assert(_fchain_ofstream.good());
+	std::vector<CallChain> chains = _function_chains.list();
+	std::vector<CallChain>::iterator iter = chains.begin();
+	std::cout << "Writing chain data ... (" << chains.size() << " entries)" << std::endl;
+
+	for(iter; iter != chains.end(); ++iter) 
+		{
+		std::vector<uint32_t> entries = iter->entries();
+		std::vector<uint32_t>::iterator entry_iter = entries.begin();
+		bool first_entry = true;
+		_fchain_ofstream << "[" << iter->count << "] ";
+		for(entry_iter; entry_iter != entries.end(); ++entry_iter) 
+			{
+			if(!first_entry) {
+				_fchain_ofstream << " -> ";
+			}
+			else {	
+				first_entry = false;
+			}
+			FunctionEntry curr = _function_table.lookup(*entry_iter);
+			_fchain_ofstream << curr.name << "@" << curr.file << ":" << curr.line;
+			}
+		_fchain_ofstream << std::endl;
+		}
 	}
 
 void Plugin::WriteFunctionData()

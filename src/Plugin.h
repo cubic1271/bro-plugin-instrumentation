@@ -34,6 +34,9 @@ public:
 	static void SetFunctionDataTarget(const std::string target);
 	static void WriteFunctionData();
 
+	static void SetChainDataTarget(const std::string target);
+	static void WriteChainData();
+
 protected:
 	virtual plugin::Configuration Configure();
 	static Val* CallBroFunction(const BroFunc* func, Frame *parent, val_list* args);

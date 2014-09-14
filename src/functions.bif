@@ -43,3 +43,15 @@ function FunctionDataWrite%(%): bool
 	plugin::Instrumentation::plugin.WriteFunctionData();
 	return new Val(1, TYPE_BOOL);
 	%}
+
+function SetChainDataTarget%(target: string%): bool
+	%{
+	plugin::Instrumentation::plugin.SetChainDataTarget(std::string((char *)target->Bytes()));
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function ChainDataWrite%(%): bool
+	%{
+	plugin::Instrumentation::plugin.WriteChainData();
+	return new Val(1, TYPE_BOOL);
+	%}
