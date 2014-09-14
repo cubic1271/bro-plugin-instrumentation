@@ -114,13 +114,17 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
             const Location* loc = bodies[i].stmts->GetLocationInfo();
             char sbuf[4096];
             snprintf(sbuf, 4096, "%s@%s:%d", func->Name(), loc->filename, loc->first_line);
-            if(_counters.find(sbuf) != _counters.end())
+            std::string key = std::string(sbuf);
+            if(_counters.find(key) != _counters.end())
 	            {
-	            _counters[sbuf] = (_counters[sbuf] + result);
+	            _counters[key] = (_counters[key] + result);
     	        }
     	    else
     		    {
-    		    _counters[sbuf] = result;
+    		    _counters[key] = result;
+    		    _counters[key].name = std::string(func->Name());
+    		    snprintf(sbuf, 4096, "%s:%d", loc->filename, loc->first_line);
+    		    _counters[key].location = std::string(sbuf);
 	    	    }
             }
 
@@ -248,7 +252,12 @@ void Plugin::SetFunctionDataTarget(const std::string target)
 
 void Plugin::WriteFunctionData()
 	{
-
+	for(_counter_iterator iter = _counters.begin(); iter != _counters.end(); ++iter)
+		{
+		assert(_fdata_ofstream.good());
+		iter->second.Write(_fdata_ofstream);
+		}
+	_fdata_ofstream.flush();
 	}
 
 void Plugin::WriteCollection()
@@ -299,7 +308,7 @@ void Plugin::FunctionCounterSet::ConfigWriter(ofstream& target)
 
 void Plugin::FunctionCounterSet::Write(ofstream& target)
 	{
-	target << network_time << " \"" << name << "\" \"" << location << "\" " << count; 
+	target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
 	target << memory.malloc_count << " " << memory.free_count << " ";
 	target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
 	target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
@@ -336,6 +345,6 @@ Plugin::CounterSet Plugin::CounterSet::operator+ (const CounterSet& c2)
 Plugin::CounterSet Plugin::CounterSet::operator- (const CounterSet& c2)
 {
 	Plugin::CounterSet tmp;
-	tmp.cycles = this->cycles - c2.cycles;
+	tmp.cycles = (this->cycles > c2.cycles) ? this->cycles - c2.cycles : 0;
 	return tmp;
 }

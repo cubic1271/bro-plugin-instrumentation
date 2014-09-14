@@ -26,6 +26,8 @@ public:
 		void Read();
 		CounterSet operator-(const CounterSet& c2);
 		CounterSet operator+(const CounterSet& c2);
+		CounterSet()
+		: cycles(0) { }
 	};
 
 	struct FunctionCounterSet {
@@ -84,7 +86,6 @@ public:
 
 	static void SetFunctionDataTarget(const std::string target);
 	static void WriteFunctionData();
-	static void FlushFunctionData();
 
 
 protected:

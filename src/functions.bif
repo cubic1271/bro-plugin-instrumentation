@@ -31,3 +31,15 @@ function CollectionFlush%(%): bool
 	plugin::Instrumentation::plugin.FlushCollection();
 	return new Val(1, TYPE_BOOL);
 	%}
+
+function SetFunctionDataTarget%(target: string%): bool
+	%{
+	plugin::Instrumentation::plugin.SetFunctionDataTarget(std::string((char *)target->Bytes()));
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function FunctionDataWrite%(%): bool
+	%{
+	plugin::Instrumentation::plugin.WriteFunctionData();
+	return new Val(1, TYPE_BOOL);
+	%}
