@@ -8,6 +8,7 @@
 #include <dlfcn.h>
 #include <iostream>
 #include <fstream>
+#include <set>
 
 #include "util/functable.h"
 #include "util/funcchain.h"
@@ -30,6 +31,7 @@ static std::ofstream _fdata_ofstream;
 
 static std::string _fchain_target = "";
 static std::ofstream _fchain_ofstream;
+static uint64_t _fchain_cutoff = 0;
 
 static CounterSet _original_state;
 
@@ -285,32 +287,56 @@ void Plugin::SetChainDataTarget(const std::string target)
 	_fchain_ofstream.open(_fchain_target);
 	}
 
+void Plugin::SetChainDataCutoff(const uint64_t target)
+	{
+	_fchain_cutoff = target;
+	}
+
 void Plugin::WriteChainData()
 	{
 	assert(_fchain_ofstream.good());
 	std::vector<CallChain> chains = _function_chains.list();
 	std::vector<CallChain>::iterator iter = chains.begin();
-	std::cout << "Writing chain data ... (" << chains.size() << " entries)" << std::endl;
+
+	_fchain_ofstream << "digraph G {" << std::endl;
+	std::set<uint32_t> used;
 
 	for(iter; iter != chains.end(); ++iter) 
 		{
+		if(iter->count < _fchain_cutoff) {
+			continue;
+		}
 		std::vector<uint32_t> entries = iter->entries();
 		std::vector<uint32_t>::iterator entry_iter = entries.begin();
 		bool first_entry = true;
-		_fchain_ofstream << "[" << iter->count << "] ";
+		_fchain_ofstream << "    ";
 		for(entry_iter; entry_iter != entries.end(); ++entry_iter) 
 			{
-			if(!first_entry) {
+			if(!first_entry) 
+				{
 				_fchain_ofstream << " -> ";
-			}
-			else {	
+				}
+			else 
+				{	
 				first_entry = false;
+				}
+			_fchain_ofstream << *entry_iter;
+			if(used.find(*entry_iter) == used.end()) 
+				{
+				used.insert(*entry_iter);
+				}
+			// _fchain_ofstream << curr.name << "@" << curr.file << ":" << curr.line;
 			}
-			FunctionEntry curr = _function_table.lookup(*entry_iter);
-			_fchain_ofstream << curr.name << "@" << curr.file << ":" << curr.line;
-			}
-		_fchain_ofstream << std::endl;
+		_fchain_ofstream << ";" << std::endl;
 		}
+	for(std::set<uint32_t>::iterator iter = used.begin();
+			iter != used.end(); ++iter) 
+		{
+		FunctionEntry curr = _function_table.lookup(*iter);
+		_fchain_ofstream << *iter << " [shape=box,label=\"" << curr.name << "\\n" 
+						 << FunctionTable::beautify(curr.file) << ":" << curr.line << "\"];" << std::endl;
+		}
+	_fchain_ofstream << "}" << std::endl;
 	}
 
 void Plugin::WriteFunctionData()
@@ -335,4 +361,3 @@ void Plugin::FlushCollection()
 	assert(_stats_ofstream.good());
 	_stats_ofstream.flush();
 	}
-

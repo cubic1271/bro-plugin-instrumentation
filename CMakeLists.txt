@@ -21,4 +21,3 @@ bro_plugin_bif(src/consts.bif)
 bro_plugin_bif(src/events.bif)
 bro_plugin_bif(src/functions.bif)
 bro_plugin_end()
-

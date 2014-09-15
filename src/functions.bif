@@ -50,6 +50,15 @@ function SetChainDataTarget%(target: string%): bool
 	return new Val(1, TYPE_BOOL);
 	%}
 
+function SetChainDataCutoff%(target: int%): bool
+	%{
+	if(target < 0) {
+		target = 0;
+	}
+	plugin::Instrumentation::plugin.SetChainDataCutoff((uint64_t)target);
+	return new Val(1, TYPE_BOOL);
+	%}
+
 function ChainDataWrite%(%): bool
 	%{
 	plugin::Instrumentation::plugin.WriteChainData();

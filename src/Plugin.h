@@ -34,6 +34,7 @@ public:
 	static void SetFunctionDataTarget(const std::string target);
 	static void WriteFunctionData();
 
+	static void SetChainDataCutoff(const uint64_t target);
 	static void SetChainDataTarget(const std::string target);
 	static void WriteChainData();
 
