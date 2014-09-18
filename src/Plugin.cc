@@ -140,7 +140,8 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
             _counter_stack.push_back(FunctionCounterSet::Create(_network_time));
             _function_chains.add(key);
             result = bodies[i].stmts->Exec(f, flow);
-            FunctionCounterSet result = FunctionCounterSet::Create(_network_time) - _counter_stack.back();
+            FunctionCounterSet result = FunctionCounterSet::Create(_network_time);
+            result -= _counter_stack.back();
             result.count = 1;
             _counter_stack.pop_back();
             _function_chains.end();

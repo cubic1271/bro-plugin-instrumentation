@@ -65,8 +65,8 @@ At the moment, function data is tracked via a map.  This is not efficient.  A be
 Dot output generally tends to be extremely long and flat.  One way to make the output a little better is to use the 'unflatten' utility
 to pre-process the graphs intended for dot, e.g.
 
-There's code in here to support lower-level statistics (cache, others) via Intel PCM, but there are cross-platform considerations that make this trickier than it would be otherwise.  As such, supporting these is a TODO item.
-
 ```bash
 unflatten -c 5 chains.out | dot -Tpng /tmp/callgraph.png
 ```
+
+There's code in here to support lower-level statistics (cache, others) via Intel PCM, but there are cross-platform considerations that make this trickier than it would be otherwise.  As such, supporting these is a TODO item.

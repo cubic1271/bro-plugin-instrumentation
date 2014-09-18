@@ -16,7 +16,10 @@ namespace Instrumentation
 		uint64_t cycles;
 		void Read();
 		CounterSet operator-(const CounterSet& c2);
+		CounterSet& operator-= (const CounterSet& c2);
 		CounterSet operator+(const CounterSet& c2);
+		CounterSet& operator+= (const CounterSet& c2);
+
 		CounterSet()
 		: cycles(0) { }
 	};
@@ -29,6 +32,9 @@ namespace Instrumentation
 		MemoryInfo memory;
 		ReadWriteInfo io;
 		CounterSet perf;
+
+		FunctionCounterSet(const double network_time, MemoryInfo memory, ReadWriteInfo io)
+		: network_time(network_time), name("-"), location("-"), count(0), memory(memory), io(io) { perf.Read(); }
 
 		FunctionCounterSet()
 		: network_time(0.0), name("-"), location("-"), count(0)
@@ -63,6 +69,29 @@ namespace Instrumentation
 			return tmp;
 			}
 
+		FunctionCounterSet& operator +=(const FunctionCounterSet& s2)
+			{
+			this->network_time += s2.network_time;
+			this->name = s2.name;
+			this->location = s2.location;
+			this->memory += s2.memory;
+			this->io += s2.io;
+			this->count += s2.count;
+			this->perf += s2.perf;
+			return *this;
+			}
+
+		FunctionCounterSet& operator -=(const FunctionCounterSet& s2)
+			{
+			this->network_time -= s2.network_time;
+			this->name = s2.name;
+			this->location = s2.location;
+			this->memory -= s2.memory;
+			this->io -= s2.io;
+			this->count -= s2.count;
+			this->perf -= s2.perf;
+			return *this;
+			}
 	};
 }
 }

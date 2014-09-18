@@ -60,6 +60,35 @@ namespace plugin {
 			  		                 read_sz - s2.read_sz, write_sz - s2.write_sz);
 			}
 
+			ReadWriteInfo& operator +=(const ReadWriteInfo& s2) {
+				this->fopen_count += s2.fopen_count;
+				this->fread_count += s2.fread_count;
+				this->fwrite_count += s2.fwrite_count;
+				this->fflush_count += s2.fflush_count;
+				this->fread_sz += s2.fread_sz;
+				this->fwrite_sz += s2.fwrite_sz;
+				this->open_count += s2.open_count;
+				this->read_count += s2.read_count;
+				this->write_count += s2.write_count;
+				this->read_sz += s2.read_sz;
+				this->write_sz += s2.write_sz;
+				return *this;
+			}
+
+			ReadWriteInfo& operator -=(const ReadWriteInfo& s2) {
+				this->fopen_count -= s2.fopen_count;
+				this->fread_count -= s2.fread_count;
+				this->fwrite_count -= s2.fwrite_count;
+				this->fflush_count -= s2.fflush_count;
+				this->fread_sz -= s2.fread_sz;
+				this->fwrite_sz -= s2.fwrite_sz;
+				this->open_count -= s2.open_count;
+				this->read_count -= s2.read_count;
+				this->write_count -= s2.write_count;
+				this->read_sz -= s2.read_sz;
+				this->write_sz -= s2.write_sz;
+				return *this;
+			}
 		};
 
 		const ReadWriteInfo GetReadWriteCounts();

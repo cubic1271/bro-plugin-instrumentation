@@ -8,11 +8,7 @@ namespace Instrumentation
 
 	FunctionCounterSet FunctionCounterSet::Create(double network_time)
 		{
-		FunctionCounterSet set;
-		set.memory = GetMemoryCounts();
-		set.io = GetReadWriteCounts();
-		set.network_time = network_time;
-		set.perf.Read();
+		FunctionCounterSet set(network_time, GetMemoryCounts(), GetReadWriteCounts());
 		return set;
 		}
 
@@ -38,7 +34,7 @@ namespace Instrumentation
 			   << " int"
 			   << std::endl;
 		}
-		
+
 	void FunctionCounterSet::Write(std::ofstream& target)
 		{
 		target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
@@ -57,7 +53,7 @@ namespace Instrumentation
 	        uint32_t cpu1, cpu2, cpu3, cpu4;
 	        // serializing instruction
 	        // all registers may be modified.  load 0 into EAX to fetch vendor string.
-	        asm volatile("cpuid" : /*no output*/ : "a"(0) : "eax", "ebx", "ecx", "edx");
+	        // asm volatile("cpuid" : /*no output*/ : "a"(0) : "eax", "ebx", "ecx", "edx");
 	        // read cycle count
 	        asm volatile("rdtsc" : "=a" (low), "=d" (high));
 	        this->cycles = ((uint64_t(high) << uint64_t(32)) | low);
@@ -79,6 +75,18 @@ namespace Instrumentation
 		CounterSet tmp;
 		tmp.cycles = (this->cycles > c2.cycles) ? this->cycles - c2.cycles : 0;
 		return tmp;
+	}
+
+	CounterSet& CounterSet::operator+= (const CounterSet& c2)
+	{
+		this->cycles = this->cycles + c2.cycles;
+		return *this;
+	}
+
+	CounterSet& CounterSet::operator-= (const CounterSet& c2)
+	{
+		this->cycles = (this->cycles > c2.cycles) ? this->cycles - c2.cycles : 0;
+		return *this;
 	}
 }
 }

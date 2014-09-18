@@ -38,6 +38,20 @@ namespace plugin {
 								  free_count - s2.free_count,
 								  malloc_sz - s2.malloc_sz);
 			}
+
+			MemoryInfo operator +=(const MemoryInfo& s2) {
+				this->malloc_count += s2.malloc_count;
+				this->free_count += s2.free_count;
+				this->malloc_sz += s2.malloc_sz;
+				return *this;
+			}
+
+			MemoryInfo operator -=(const MemoryInfo& s2) {
+				this->malloc_count -= s2.malloc_count;
+				this->free_count -= s2.free_count;
+				this->malloc_sz -= s2.malloc_sz;
+				return *this;
+			}
 		};
 
 		const MemoryInfo GetMemoryCounts();
