@@ -4,6 +4,7 @@
 #include "Func.h"
 #include "Stats.h"
 #include "Stmt.h"
+#include "Trigger.h"
 
 #include <dlfcn.h>
 #include <iostream>
@@ -56,7 +57,7 @@ plugin::Configuration Plugin::Configure()
 	}
 
 void Plugin::HookUpdateNetworkTime(const double network_time)
-	{	
+	{
 	_network_time = network_time;
 	++_last_stats_count;
 
@@ -211,7 +212,7 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
     // hack: since the plugin architecture can't distinguish between a NULL returned by our method
     // and a NULL returned by a function, we rely on the plugin result handler to fix things for us.
     if(NULL == result) {
-    	return new Val(true, TYPE_BOOL);
+    	return new Val(0, TYPE_ERROR);
     }
     return result;
 	}
@@ -222,7 +223,7 @@ Val* Plugin::CallBuiltinFunction(const BuiltinFunc *func, Frame *parent, val_lis
     // hack: since the plugin architecture can't distinguish between a NULL returned by our method
     // and a NULL returned by a function, we rely on the plugin result handler to fix things for us.
     if(NULL == result) {
-    	return new Val(true, TYPE_BOOL);
+    	return new Val(0, TYPE_ERROR);
     }
     return result;
 	}
@@ -247,13 +248,13 @@ Val* Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
 
 void Plugin::InitPreScript()
 	{
-	reporter->Info("[instrumentation] Initializing instrumentation plugin...\n");
+	//reporter->Info("[instrumentation] Initializing instrumentation plugin...\n");
 	plugin::Plugin::InitPreScript();
 
 	EnableHook(HOOK_UPDATE_NETWORK_TIME);
 	EnableHook(HOOK_CALL_FUNCTION);
-
-	reporter->Info("[instrumentation] initialization completed.\n");
+	
+    // reporter->Info("[instrumentation] initialization completed.\n");
 	_original_state.Read();
 
 	}

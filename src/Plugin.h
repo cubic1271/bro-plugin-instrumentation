@@ -21,7 +21,7 @@ namespace Instrumentation {
 class Plugin : public ::plugin::Plugin
 {
 public:
-    virtual void HookUpdateNetworkTime(const double network_time);
+    virtual void HookUpdateNetworkTime(double network_time);
     virtual void InitPreScript();
     virtual Val* HookCallFunction(const Func* func, Frame *parent, val_list* args);
 
