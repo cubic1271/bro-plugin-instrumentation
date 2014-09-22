@@ -40,9 +40,16 @@ namespace Instrumentation
 		: network_time(0.0), name("-"), location("-"), count(0)
 		{ }
 
+		enum OutputType {
+			OUTPUT_CSV,
+			OUTPUT_JSON
+		};
+
 		static FunctionCounterSet Create(double network_time);
-		static void ConfigWriter(std::ofstream& target);
-		void Write(std::ofstream& target);
+		static void ConfigWriter(std::ofstream& target, const OutputType type);
+		static void FinalizeWriter(std::ofstream& target, const OutputType type);
+		static void WriteSeparator(std::ofstream& target, const OutputType type);
+		void Write(std::ofstream& target, const OutputType type);
 		FunctionCounterSet operator -(const FunctionCounterSet& s2)
 			{
 			FunctionCounterSet tmp;

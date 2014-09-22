@@ -8,6 +8,14 @@
 
 module Instrumentation;
 
+## 
+
+function SetOutputDataFormat%(target: string%): bool
+	%{
+	plugin::Instrumentation::plugin.SetOutputDataFormat(std::string((char *)target->Bytes()));
+	return new Val(1, TYPE_BOOL);
+	%}
+
 function SetCollectionTimer%(target: double%): bool
 	%{
 	plugin::Instrumentation::plugin.SetCollectionTimer(target);
@@ -32,6 +40,12 @@ function CollectionFlush%(%): bool
 	return new Val(1, TYPE_BOOL);
 	%}
 
+function CollectionFinalize%(%): bool
+	%{
+	plugin::Instrumentation::plugin.FinalizeCollection();
+	return new Val(1, TYPE_BOOL);
+	%}
+
 function SetFunctionDataTarget%(target: string%): bool
 	%{
 	plugin::Instrumentation::plugin.SetFunctionDataTarget(std::string((char *)target->Bytes()));
@@ -41,6 +55,12 @@ function SetFunctionDataTarget%(target: string%): bool
 function FunctionDataWrite%(%): bool
 	%{
 	plugin::Instrumentation::plugin.WriteFunctionData();
+	return new Val(1, TYPE_BOOL);
+	%}
+
+function FunctionDataFinalize%(%): bool
+	%{
+	plugin::Instrumentation::plugin.FinalizeFunctionData();
 	return new Val(1, TYPE_BOOL);
 	%}
 

@@ -15,8 +15,9 @@ static __thread uint64_t _free_count = 0;
 
 // nasty hack to work around dlsym call to calloc when pthreads are used.
 // use 64-bit value for alignment.
-static uint64_t _calloc_buffer_init[32];
-static uint8_t _initial_buffer_used = 0;
+static __thread uint64_t _calloc_buffer_init[256];
+static __thread uint8_t _initial_buffer_used = 0;
+static __thread uint8_t _enable_initial_buffer = 0;
 
 const plugin::Instrumentation::MemoryInfo plugin::Instrumentation::GetMemoryCounts() {
     return MemoryInfo(_malloc_count, _free_count, _malloc_sz);
@@ -24,12 +25,14 @@ const plugin::Instrumentation::MemoryInfo plugin::Instrumentation::GetMemoryCoun
 
 // make sure we don't end up in a recursive malloc call.
 void* calloc (size_t num, size_t size) {
-    if(!_initial_buffer_used) {
+    if(!_initial_buffer_used && _enable_initial_buffer) {
         _initial_buffer_used = 1;
         return (void *)_calloc_buffer_init;
     }
     if(!_libc_calloc) {
+        _enable_initial_buffer = 1;
         _libc_calloc = (void* (*)(size_t, size_t))(dlsym(RTLD_NEXT, "calloc"));
+        _enable_initial_buffer = 0;
     }
     ++ _malloc_count;
     _malloc_sz += (num * size);

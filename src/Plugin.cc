@@ -26,9 +26,11 @@ static uint64_t _stats_count = 0;
 
 static std::string _stats_target = "";
 static std::ofstream _stats_ofstream;
+static bool _stats_separator = false;
 
 static std::string _fdata_target = "";
 static std::ofstream _fdata_ofstream;
+static bool _fdata_separator = false;
 
 static std::string _fchain_target = "";
 static std::ofstream _fchain_ofstream;
@@ -46,6 +48,8 @@ typedef std::map<uint32_t, FunctionCounterSet>::iterator _counter_iterator;
 static FunctionTable _function_table;
 static FunctionCallChain _function_chains;
 
+static FunctionCounterSet::OutputType _output_type = FunctionCounterSet::OUTPUT_JSON;
+
 plugin::Configuration Plugin::Configure()
 	{
 	plugin::Configuration config;
@@ -54,6 +58,22 @@ plugin::Configuration Plugin::Configure()
 	config.version.major = 1;
 	config.version.minor = 0;
 	return config;
+	}
+
+void Plugin::SetOutputDataFormat(std::string type)
+	{
+	if("application/json" == type) 
+		{
+		_output_type = FunctionCounterSet::OUTPUT_JSON;
+		}
+	else if("text/csv" == type)
+		{
+		_output_type = FunctionCounterSet::OUTPUT_CSV;
+		}
+	else 
+		{
+		_output_type = FunctionCounterSet::OUTPUT_JSON;
+		}
 	}
 
 void Plugin::HookUpdateNetworkTime(const double network_time)
@@ -273,14 +293,20 @@ void Plugin::SetCollectionTarget(const std::string target)
 	{
 	_stats_target = target;
 	_stats_ofstream.open(_stats_target);
-	FunctionCounterSet::ConfigWriter(_stats_ofstream);
+	FunctionCounterSet::ConfigWriter(_stats_ofstream, _output_type);
 	}
 
 void Plugin::SetFunctionDataTarget(const std::string target)
 	{
 	_fdata_target = target;
 	_fdata_ofstream.open(_fdata_target);
-	FunctionCounterSet::ConfigWriter(_fdata_ofstream);
+	FunctionCounterSet::ConfigWriter(_fdata_ofstream, _output_type);
+	}
+
+void Plugin::FinalizeFunctionData()
+	{
+	FunctionCounterSet::FinalizeWriter(_fdata_ofstream, _output_type);
+	_fdata_ofstream.flush();
 	}
 
 void Plugin::SetChainDataTarget(const std::string target)
@@ -345,8 +371,14 @@ void Plugin::WriteFunctionData()
 	{
 	for(_counter_iterator iter = _counters.begin(); iter != _counters.end(); ++iter)
 		{
+		if(_fdata_separator) {
+			FunctionCounterSet::WriteSeparator(_fdata_ofstream, _output_type);
+		}
+		else {
+			_fdata_separator = true;
+		}
 		assert(_fdata_ofstream.good());
-		iter->second.Write(_fdata_ofstream);
+		iter->second.Write(_fdata_ofstream, _output_type);
 		}
 	_fdata_ofstream.flush();
 	}
@@ -354,12 +386,24 @@ void Plugin::WriteFunctionData()
 void Plugin::WriteCollection()
 	{
 	assert(_stats_ofstream.good());
+	if(_stats_separator) {
+		FunctionCounterSet::WriteSeparator(_stats_ofstream, _output_type);
+	}
+	else {
+		_stats_separator = true;
+	}
 	FunctionCounterSet set = FunctionCounterSet::Create(_network_time);
-	set.Write(_stats_ofstream);
+	set.Write(_stats_ofstream, _output_type);
 	}
 
 void Plugin::FlushCollection()
 	{
 	assert(_stats_ofstream.good());
+	_stats_ofstream.flush();
+	}
+
+void Plugin::FinalizeCollection()
+	{
+	FunctionCounterSet::FinalizeWriter(_stats_ofstream, _output_type);
 	_stats_ofstream.flush();
 	}

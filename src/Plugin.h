@@ -30,9 +30,13 @@ public:
 	static void SetCollectionTarget(const std::string target);
 	static void WriteCollection();
 	static void FlushCollection();
+	static void FinalizeCollection();
 
 	static void SetFunctionDataTarget(const std::string target);
 	static void WriteFunctionData();
+	static void FinalizeFunctionData();
+
+	static void SetOutputDataFormat(std::string type);
 
 	static void SetChainDataCutoff(const uint64_t target);
 	static void SetChainDataTarget(const std::string target);

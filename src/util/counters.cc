@@ -12,38 +12,93 @@ namespace Instrumentation
 		return set;
 		}
 
-	void FunctionCounterSet::ConfigWriter(std::ofstream& target)
+	void FunctionCounterSet::FinalizeWriter(std::ofstream& target, const OutputType type)
+		{
+		if(type == OUTPUT_JSON)
+			{
+			target << "]" << std::endl;
+			}
+		}
+
+	void FunctionCounterSet::ConfigWriter(std::ofstream& target, const OutputType type)
 		{
 		target.setf(ios::fixed, ios::floatfield);
 		target.setf(ios::showpoint);
 		target.precision(6);
 
-		target << "#fields"
-			   << " network_time name location count"
-			   << " malloc_count free_count malloc_sz fopen_count" 
-		       << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
-		       << " read_count fread_sz read_sz"
-		       << " cycles"
-		       << std::endl;
+		if(type == OUTPUT_CSV)
+			{
+			target << "#fields"
+				   << " network_time name location count"
+				   << " malloc_count free_count malloc_sz fopen_count" 
+			       << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
+			       << " read_count fread_sz read_sz"
+			       << " cycles"
+			       << std::endl;
 
-		target << "#types" 
-			   << " double \"string\" \"string\" int"
-			   << " int int int int"
-			   << " int int int int int int"
-			   << " int int int int" 
-			   << " int"
-			   << std::endl;
+			target << "#types" 
+				   << " double \"string\" \"string\" int"
+				   << " int int int int"
+				   << " int int int int int int"
+				   << " int int int int" 
+				   << " int"
+				   << std::endl;
+			}
+		else if(type == OUTPUT_JSON)
+			{
+			target << "[" << std::endl;
+			}
 		}
 
-	void FunctionCounterSet::Write(std::ofstream& target)
+	void FunctionCounterSet::WriteSeparator(std::ofstream& target, const OutputType type)
 		{
-		target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
-		target << memory.malloc_count << " " << memory.free_count << " ";
-		target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
-		target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
-		target << io.write_sz << " " << io.fread_count << " " << io.read_count << " ";
-		target << io.fread_sz << " " << io.read_sz << " ";
-		target << perf.cycles << "\n";
+		if(type == OUTPUT_JSON)
+			{
+			target << ",";
+			}
+		}
+
+	void FunctionCounterSet::Write(std::ofstream& target, const OutputType type)
+		{
+		if(type == OUTPUT_CSV) 
+			{
+			target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
+			target << memory.malloc_count << " " << memory.free_count << " ";
+			target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
+			target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
+			target << io.write_sz << " " << io.fread_count << " " << io.read_count << " ";
+			target << io.fread_sz << " " << io.read_sz << " ";
+			target << perf.cycles << "\n";
+			}
+		else if(type == OUTPUT_JSON)
+			{
+			target << std::endl;
+			target << "{";
+				target << "\"network-time\": " << network_time << ",";
+				target << "\"name\": \"" << name << "\",";
+				target << "\"location\": \"" << location << "\",";
+				target << "\"count\": " << count << ",";
+				target << "\"memory\": {";
+					target << "\"malloc_count\": " << memory.malloc_count << ",";
+					target << "\"free_count\": " << memory.free_count << ",";
+					target << "\"malloc_sz\": " << memory.malloc_sz << " },";
+				target << "\"io\": {";
+					target << "\"fopen_count\": " << io.fopen_count << ",";
+					target << "\"open_count\": " << io.open_count << ",";
+					target << "\"fwrite_count\": " << io.fwrite_count << ",";
+					target << "\"write_count\": " << io.write_count << ",";
+					target << "\"fwrite_sz\": " << io.fwrite_sz << ",";
+					target << "\"write_sz\": " << io.write_sz << ",";
+					target << "\"fread_count\": " << io.fread_count << ",";
+					target << "\"read_count\": " << io.read_count << ",";
+					target << "\"fread_sz\": " << io.fread_sz << ",";
+					target << "\"read_sz\": " << io.read_sz;
+				target << "},";
+				target << "\"perf\": {";
+					target << "\"cycles\": " << perf.cycles; 
+				target << "}";
+			target << "}";
+			}
 		}
 
 	void CounterSet::Read()
