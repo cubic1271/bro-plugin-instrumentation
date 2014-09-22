@@ -8,68 +8,84 @@
 
 module Instrumentation;
 
-## 
-
+## Sets the output data format to either be CSV or JSON, depending on the value of 'target'
+## target: Either "application/json" or "text/csv"
 function SetOutputDataFormat%(target: string%): bool
 	%{
 	plugin::Instrumentation::plugin.SetOutputDataFormat(std::string((char *)target->Bytes()));
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the periodic stats collector to write data every 'target' seconds of network time
+## target: Elapsed network time in seconds
 function SetCollectionTimer%(target: double%): bool
 	%{
 	plugin::Instrumentation::plugin.SetCollectionTimer(target);
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the periodic stats collector to write data every 'target' packets it observes on the wire
+## target: Number of observed packets
 function SetCollectionCount%(target: int%): bool
 	%{
 	plugin::Instrumentation::plugin.SetCollectionCount((uint64_t)target);
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the periodic stats collector to write data to the file specified by 'target'
+## target: path to log file
 function SetCollectionTarget%(target: string%): bool
 	%{
 	plugin::Instrumentation::plugin.SetCollectionTarget(std::string((char *)target->Bytes()));
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells collector to flush all data: when this returns, *no* pending data will be left in the write buffer
 function CollectionFlush%(%): bool
 	%{
 	plugin::Instrumentation::plugin.FlushCollection();
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Writes any footer information (needed for JSON files to properly terminate the array)
 function CollectionFinalize%(%): bool
 	%{
 	plugin::Instrumentation::plugin.FinalizeCollection();
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the function profiler to write data to the log file specified by 'target'
+## target: path to log file
 function SetFunctionDataTarget%(target: string%): bool
 	%{
 	plugin::Instrumentation::plugin.SetFunctionDataTarget(std::string((char *)target->Bytes()));
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Writes a complete set of function profile statistics
 function FunctionDataWrite%(%): bool
 	%{
 	plugin::Instrumentation::plugin.WriteFunctionData();
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Writes any footer information (needed for JSOn files to properly terminate the array)
 function FunctionDataFinalize%(%): bool
 	%{
 	plugin::Instrumentation::plugin.FinalizeFunctionData();
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the function call recorder to write data to the log file specified by 'target'
+## target: path to log file
 function SetChainDataTarget%(target: string%): bool
 	%{
 	plugin::Instrumentation::plugin.SetChainDataTarget(std::string((char *)target->Bytes()));
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Tells the function call recorder to only write data for function call paths that have been seen at least 'target' number of times
+## target: minimum number of times a specific call chain needs to have been seen in order to be written
 function SetChainDataCutoff%(target: int%): bool
 	%{
 	if(target < 0) {
@@ -79,6 +95,7 @@ function SetChainDataCutoff%(target: int%): bool
 	return new Val(1, TYPE_BOOL);
 	%}
 
+## Writes (and flushes!) a complete set of function call path data to a log file
 function ChainDataWrite%(%): bool
 	%{
 	plugin::Instrumentation::plugin.WriteChainData();

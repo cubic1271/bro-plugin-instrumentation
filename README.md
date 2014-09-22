@@ -42,25 +42,33 @@ This plugin can collect information in three different forms:
 * Track statistics per-function / per-event.  This is enabled via the Instrumentation::(Set)?Function* set of methods.
 * Build call-graphs (meant to be parsed by the graphviz 'dot' utility) to visualize what the code is doing.  This is enabled via the Instrumentation::(Set)?ChainData* set of methods.
 
+As a convenience, there are three wrapper scripts included with this plugin: instrumentation/instrumentation/chains.bro, instrumentation/instrumentation/function.bro, and instrumentation/instrumentation/collection.bro.  Including these three files will make working with the interface quite a bit easier: see those files for relevant comments.  As a quick start, though:
+
 An example of writing statistics to a file called '/tmp/collection.out' for every 10000 observed packets:
 
 ```
-event bro_init() {
-	# Write a new statistics line once for every 10000 packets we see ...
-    Instrumentation::SetCollectionCount(10000);
-    # ... to the file '/tmp/collection.out'
-    Instrumentation::SetCollectionTarget("/tmp/collection.out");
-}
+@load instrumentation/instrumentation/collection.bro
 
-event bro_done() {
-	# Make sure everything has been written to the collection file since we're getting ready to exit
-    Instrumentation::CollectionFlush();
-}
+redef Instrumentation::collection_log = "/tmp/collection.out";
+redef Instrumentation::collection_freq = 10000;
+
+```
+
+An example of writing function profiling, chain profiling, and collection information (once every 100 packets) to the default log paths:
+
+```
+@load instrumentation/instrumentation/collection.bro
+@load instrumentation/instrumentation/function.bro
+@load instrumentation/instrumentation/chains.bro
+
+redef Instrumentation::collection_freq = 100;
+redef Instrumentation::function_profile_enable = T;
+redef Instrumentation::chain_profile_enable = T;
 ```
 
 ## Notes ##
 
-At the moment, function data is tracked via a map.  This is not efficient.  A better implementation might e.g. use a vector and index directly by the function IDs.  This may be coming in a future version of the code.
+Function profiling really, really needs to be further optimized.  I think a lot of the overhead has to do with the copying involved.  This is an important thing to fix.
 
 Dot output generally tends to be extremely long and flat.  One way to make the output a little better is to use the 'unflatten' utility
 to pre-process the graphs intended for dot, e.g.
