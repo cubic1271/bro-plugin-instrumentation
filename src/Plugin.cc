@@ -117,7 +117,7 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 
 
     /*
-	FIXME: something is wrong here, but not yet sure what ...
+	FIXME: is this loop *really* right ... ?
 
 	HandlePluginResult has a blanket Unref(), but in the case that the arg list is
 	passed along to the frame when we make our call, it'll be Unref'd there as well.
@@ -229,34 +229,24 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
     g_frame_stack.pop_back();
     Unref(f);
 
-    // hack: since the plugin architecture can't distinguish between a NULL returned by our method
-    // and a NULL returned by a function, we rely on the plugin result handler to fix things for us.
-    if(NULL == result) {
-    	return new Val(0, TYPE_ERROR);
-    }
     return result;
 	}
 
 Val* Plugin::CallBuiltinFunction(const BuiltinFunc *func, Frame *parent, val_list *args)
 	{
     Val* result = func->TheFunc()(parent, args);
-    // hack: since the plugin architecture can't distinguish between a NULL returned by our method
-    // and a NULL returned by a function, we rely on the plugin result handler to fix things for us.
-    if(NULL == result) {
-    	return new Val(0, TYPE_ERROR);
-    }
     return result;
 	}
 
-Val* Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
+plugin::ValWrapper* Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
 	{
-	if ( func->GetKind() == Func::BRO_FUNC) 
+	if ( func->GetKind() == Func::BRO_FUNC)
 		{
-		return CallBroFunction((BroFunc *)func, parent, args);
+		return new plugin::ValWrapper(CallBroFunction((BroFunc *)func, parent, args));
 		} // end standard bro function call
 	else if (func->GetKind() == Func::BUILTIN_FUNC)
 		{
-		return CallBuiltinFunction((BuiltinFunc *)func, parent, args);
+		return new plugin::ValWrapper(CallBuiltinFunction((BuiltinFunc *)func, parent, args));
 		}
 	else
 		{
