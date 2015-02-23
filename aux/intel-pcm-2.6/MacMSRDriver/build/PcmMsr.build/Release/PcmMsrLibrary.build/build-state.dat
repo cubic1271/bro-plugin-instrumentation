@@ -1,1063 +1,0 @@
-TPcmMsrLibrary
-v6
-r1
-cCheck dependencies
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64
-cLd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386
-cCreateUniversalBinary /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib normal x86_64\ i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
-c000000005348554F00000000000000AA
-t1397249359
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
-c00000000531129AA000000000000044C
-t1393633706
-s1100
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000531ED5FF00000000000001DE
-t1394529791
-s478
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
-c00000000531ED5FF000000000004426C
-t1394529791
-s279148
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
-c00000000531ED5FF000000000000681C
-t1394529791
-s26652
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
-c00000000531137C000000000000A2A44
-t1393637312
-s666180
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
-c00000000531137C00000000000004734
-t1393637312
-s18228
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
-c00000000531137C0000000000000FC6C
-t1393637312
-s64620
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
-c00000000531137C0000000000000F6A0
-t1393637312
-s63136
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
-c00000000531137C00000000000006254
-t1393637312
-s25172
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
-c00000000531137C0000000000000E0F8
-t1393637312
-s57592
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
-c00000000531ED5FF000000000000D6DC
-t1394529791
-s55004
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
-c00000000531ED5FF0000000000006308
-t1394529791
-s25352
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
-c00000000531137C00000000000004050
-t1393637312
-s16464
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
-c00000000531ED5FF0000000000008570
-t1394529791
-s34160
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
-c00000000531137C00000000000005EA0
-t1393637312
-s24224
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
-c00000000531137C00000000000005FAC
-t1393637312
-s24492
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
-c00000000531137C00000000000004440
-t1393637312
-s17472
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
-c00000000531137C0000000000000AA28
-t1393637312
-s43560
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
-c00000000531137C00000000000003E2C
-t1393637312
-s15916
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
-c00000000531ED5FF0000000000030B04
-t1394529791
-s199428
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
-c00000000531ED5FF0000000000005E54
-t1394529791
-s24148
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
-c00000000531ED5FF0000000000006A90
-t1394529791
-s27280
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
-c00000000531137C000000000000178AC
-t1393637312
-s96428
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
-c00000000531ED5FF000000000001ADC8
-t1394529791
-s110024
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
-c00000000531137C0000000000001028C
-t1393637312
-s66188
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
-c00000000531ED5FF0000000000008800
-t1394529791
-s34816
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
-c00000000531137C00000000000011090
-t1393637312
-s69776
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
-c00000000531137C0000000000000882C
-t1393637312
-s34860
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
-c00000000531ED5FF00000000000067AC
-t1394529791
-s26540
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
-c00000000531137C00000000000008DEC
-t1393637312
-s36332
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
-c00000000531ED5FF0000000000004C08
-t1394529791
-s19464
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
-c00000000531ED5FF0000000000002428
-t1394529791
-s9256
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
-c00000000531137C0000000000000439C
-t1393637312
-s17308
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
-c00000000531137C00000000000006768
-t1393637312
-s26472
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-c00000000531ED5FF00000000000172F4
-t1394529791
-s94964
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
-c00000000534855440000000000000720
-t1397249348
-s1824
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-c00000000534855440000000000001770
-t1397249348
-s6000
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c
-c00000000540F88D500000000000019A2
-t1410304213
-s6562
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h
-c00000000540F87560000000000000A2F
-t1410303830
-s2607
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp
-c00000000541254150000000000001762
-t1410487317
-s5986
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.h
-c0000000054124587000000000000090D
-t1410483591
-s2317
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp
-c00000000527796730000000000001B9E
-t1383569011
-s7070
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.h
-c00000000527796730000000000000A20
-t1383569011
-s2592
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-c000000005412529F0000000000000D05
-t1410486943
-s3333
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-t1410488136
-s8140
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-t1410488136
-s14616
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-t1410488136
-s56284
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList
-c000000005412574800000000000001D3
-t1410488136
-s467
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib
-t1410488136
-s22572
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-t1410488136
-s10284
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-t1410488136
-s16320
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-t1410488136
-s59280
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList
-c000000005412574800000000000001D9
-t1410488136
-s473
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib
-t1410488136
-s27488
-
-N/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib
-t2
-s0
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c
-c00000000527796730000000000001560
-t1383569011
-s5472
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp
-c00000000527796730000000000001089
-t1383569011
-s4233
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp
-c00000000527796730000000000001B9E
-t1383569011
-s7070
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-t1406331891
-s6804
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-t1406331891
-s11348
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-t1406331891
-s56236
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList
-c0000000053D2EBF200000000000001D9
-t1406331890
-s473
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib
-t1406331891
-s21972
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-t1406331891
-s8212
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-t1406331891
-s12584
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-t1406331891
-s59248
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList
-c0000000053D2EBF200000000000001DF
-t1406331890
-s479
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib
-t1406331891
-s22704
-
-N/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib
-t2
-s0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies70ec91c88ec2b941^a46d98c88ec2b941^---0#1#1#--18"Check dependencies36"3A4F8AAF-4561-4AB6-8E28-00AE705C0792-
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.597123
-e432180936.697781
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:29:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5
-o      [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kOpenDriver, 0, 0);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m
-o      'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:48:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5
-o      [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kCloseDriver, 0, 0);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m
-o      'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:65:16: [0m[0;1;35mwarning: [0m[1mimplicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99
-o      [-Wimplicit-function-declaration][0m
-o                kernResult = IOConnectMethodStructIStructO(connect, kReadMSR, *idata_size, odata_size, idata, odata);
-o[0;1;32m                             ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:145:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                        ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:150:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5
-o      [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kGetNumInstances, 0,        1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m
-o      'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:164:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:169:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5
-o      [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kIncrementNumInstances, 0, 1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m
-o      'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:184:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:189:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5
-o      [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kDecrementNumInstances, 0, 1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m
-o      'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m9 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c185"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o [1mDriverInterface.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler49f298c88ec2b941^1fa1b2c88ec2b941^-8486"[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:29:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5      [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kOpenDriver, 0, 0);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m      'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:48:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5      [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kCloseDriver, 0, 0);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m      'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:65:16: [0m[0;1;35mwarning: [0m[1mimplicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99      [-Wimplicit-function-declaration][0m                kernResult = IOConnectMethodStructIStructO(connect, kReadMSR, *idata_size, odata_size, idata, odata);[0;1;32m                             ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:145:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                        ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:150:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5      [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kGetNumInstances, 0,        1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m      'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:164:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:169:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5      [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kIncrementNumInstances, 0, 1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m      'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:184:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:189:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5      [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kDecrementNumInstances, 0, 1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m      'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m9 warnings generated.9(36%IDEClangDiagnosticActivityLogMessage2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-432180936#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^28#15#28#15#1856#0#12"Deprecations--2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-432180936#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^47#15#47#15#2251#0#12"Deprecations--2@82"Implicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^64#15#64#15#2732#0#14"Semantic Issue--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^144#90#144#90#5191#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^144#90#144#102#5191#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-432180936#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^149#15#149#15#5298#0#12"Deprecations--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^163#96#163#96#5756#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^163#96#163#108#5756#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-432180936#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^168#15#168#15#5863#0#12"Deprecations--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^183#96#183#96#6328#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^183#96#183#108#6328#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-432180936#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^188#15#188#15#6435#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^2988"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o [1mDriverInterface.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o36"38B6CE57-235E-4FC4-98F6-3B2A01B4794D-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.881220
-e428024691.134163
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:29:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kOpenDriver, 0, 0);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:48:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kCloseDriver, 0, 0);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:66:16: [0m[0;1;35mwarning: [0m[1mimplicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99 [-Wimplicit-function-declaration][0m
-o                kernResult = IOConnectMethodStructIStructO(connect, kReadMSR, *idata_size, odata_size, idata, odata);
-o[0;1;32m                             ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:114:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                        ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:119:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kGetNumInstances, 0,        1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:133:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:138:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kIncrementNumInstances, 0, 1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:153:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:158:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m
-o                kernResult = IOConnectMethodScalarIScalarO(connect, kDecrementNumInstances, 0, 1, NULL, num_insts);
-o[0;1;32m                             ^
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0m
-oIOConnectMethodScalarIScalarO( 
-o[0;1;32m^
-o[0m9 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c185"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o [1mDriverInterface.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler43ade1722383b941^605822732383b941^-8429"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:29:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kOpenDriver, 0, 0);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:48:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kCloseDriver, 0, 0);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:66:16: [0m[0;1;35mwarning: [0m[1mimplicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99 [-Wimplicit-function-declaration][0m                kernResult = IOConnectMethodStructIStructO(connect, kReadMSR, *idata_size, odata_size, idata, odata);[0;1;32m                             ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:114:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                        ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:119:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kGetNumInstances, 0,        1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:133:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:138:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kIncrementNumInstances, 0, 1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:153:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:158:16: [0m[0;1;35mwarning: [0m[1m'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations][0m                kernResult = IOConnectMethodScalarIScalarO(connect, kDecrementNumInstances, 0, 1, NULL, num_insts);[0;1;32m                             ^[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:1389:1: [0m[0;1;30mnote: [0m'IOConnectMethodScalarIScalarO' declared here[0mIOConnectMethodScalarIScalarO( [0;1;32m^[0m9 warnings generated.9(36%IDEClangDiagnosticActivityLogMessage2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-428024691#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^28#15#28#15#1856#0#12"Deprecations--2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-428024691#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^47#15#47#15#2251#0#12"Deprecations--2@82"Implicit declaration of function 'IOConnectMethodStructIStructO' is invalid in C99-428024691#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^65#15#65#15#2733#0#14"Semantic Issue--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^113#90#113#90#4101#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^113#90#113#102#4101#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-428024691#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^118#15#118#15#4208#0#12"Deprecations--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^132#96#132#96#4666#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^132#96#132#108#4666#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-428024691#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^137#15#137#15#4773#0#12"Deprecations--2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^152#96#152#96#5238#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^152#96#152#108#5238#1#-2@76"'IOConnectMethodScalarIScalarO' is deprecated: first deprecated in OS X 10.5-428024691#18446744073709551615#0#1(2@45"'IOConnectMethodScalarIScalarO' declared here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^1388#0#1388#0#69300#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^157#15#157#15#5345#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^3014"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o [1mDriverInterface.c[0m normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o36"55149F4F-FAD5-4006-91D8-D1D686EC1299-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.596774
-e432180936.722738
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:33:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:54:29: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o        idatas.msr_num[i] = msr_num[i];
-o[0;1;32m                          ~ ^~~~~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:85:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:107:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m4 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp181"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o [1mMSRAccessor.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler7de698c88ec2b941^a304b9c88ec2b941^-1439"[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:33:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:54:29: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m        idatas.msr_num[i] = msr_num[i];[0;1;32m                          ~ ^~~~~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:85:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:107:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#21#32#21#2202#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#21#32#28#2202#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#19#32#20#2200#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#28#53#28#2879#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#28#53#38#2879#9#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#26#53#27#2877#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#21#84#21#3817#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#21#84#28#3817#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#19#84#20#3815#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#21#106#21#4407#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#21#106#28#4407#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#19#106#20#4405#0#-0#0#1#-19%DVTDocumentLocation4@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^3088"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o [1mMSRAccessor.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o36"D43C422E-2589-45C9-B03C-BE13A4BB74CC-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.880860
-e428024691.150879
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:32:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:49:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m2 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp181"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o [1mMSRAccessor.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler139de1722383b941^e09f26732383b941^-712"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:32:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:49:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-428024691#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#21#31#21#2201#0#22"Value Conversion Issue2(3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#21#31#28#2201#0#3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#19#31#20#2199#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-428024691#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#21#48#21#2654#0#22"Value Conversion Issue2(3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#21#48#28#2654#0#3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#19#48#20#2652#0#-0#0#1#-19%DVTDocumentLocation4@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^3114"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o [1mMSRAccessor.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o36"E698814B-A7B4-4432-86AF-6CF5D178BE5F-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.597438
-e432180936.828648
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:
-oIn file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one
-o      deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for
-o      C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m
-o#warning This file includes at least one deprecated or antiquated header. \
-o[0;1;32m ^
-o[0m1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp195"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilerc30c99c88ec2b941^8a22d4c88ec2b941^-960"In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one      deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for      C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m#warning This file includes at least one deprecated or antiquated header. \[0;1;32m ^[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@345"This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.-432180936#18446744073709551615#0#2(2@119"In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@100"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^16#9#16#9#1557#0#21"Apple LLVM 5.0 Notice--2@161"In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@142"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h0000000000000000^58#9#58#9#2587#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@155"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h0000000000000000^31#1#31#1#1480#0#18"#warning Directive--0#0#1#-19%DVTDocumentLocation4@100"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^3130"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o36"6168E2B2-51C1-487F-94A5-2992513D8930-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.882130
-e428024691.263499
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:
-oIn file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one deprecated or antiquated header. Please consider using one of the 32
-o      headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m
-o#warning This file includes at least one deprecated or antiquated header. \
-o[0;1;32m ^
-o[0m1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp195"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilera6efe1722383b941^041c46732383b941^-956"In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one deprecated or antiquated header. Please consider using one of the 32      headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m#warning This file includes at least one deprecated or antiquated header. \[0;1;32m ^[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@345"This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.-428024691#18446744073709551615#0#2(2@121"In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@102"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^16#9#16#9#1557#0#21"Apple LLVM 5.0 Notice--2@161"In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@142"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h0000000000000000^58#9#58#9#2587#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@155"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h0000000000000000^31#1#31#1#1480#0#18"#warning Directive--0#0#1#-19%DVTDocumentLocation4@102"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^3156"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/i386 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o36"5642708C-D38D-41C1-87FA-AEABABAB3C5C-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.596391
-e432180936.689672
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:145:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                        ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:164:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:184:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type
-o      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to
-o      parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m3 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c189"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o [1mDriverInterface.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler96d198c88ec2b941^4c8db0c88ec2b941^-3448"[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:145:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                        ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:164:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:184:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type      'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to      parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^144#90#144#90#5191#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^144#90#144#102#5191#1#-2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^163#96#163#96#5756#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^163#96#163#108#5756#1#-2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-432180936#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^183#96#183#96#6328#0#14"Semantic Issue1(3@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^183#96#183#108#6328#1#-0#0#1#-19%DVTDocumentLocation4@95"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c0000000000000000^3002"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o [1mDriverInterface.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.c -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o36"191FE44F-E2C2-4740-80D9-C47A3CB9C608-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.880269
-e428024691.132524
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:114:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                        ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:133:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:153:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m
-o                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);
-o[0;1;32m                                                                                                              ^~~~~~~~~~~~
-o[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m
-o        size_t          *outputStructCnt)       // In/Out
-o[0;1;32m                         ^
-o[0m3 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c189"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o [1mDriverInterface.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler9a7ae1722383b941^81ec21732383b941^-3430"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:114:91: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kGetNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                        ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:133:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kIncrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:153:97: [0m[0;1;35mwarning: [0m[1mincompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types][0m                kernResult = IOConnectCallStructMethod(connect, kDecrementNumInstances, NULL, 0, &knum_insts, &num_outputs);[0;1;32m                                                                                                              ^~~~~~~~~~~~[0mIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c:16:In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h:18:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:780:11: [0m[0;1;30mnote: [0mpassing argument to parameter 'outputStructCnt' here[0m        size_t          *outputStructCnt)       // In/Out[0;1;32m                         ^[0m3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^113#90#113#90#4101#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^113#90#113#102#4101#1#-2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^132#96#132#96#4666#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^132#96#132#108#4666#1#-2@126"Incompatible pointer types passing 'uint32_t *' (aka 'unsigned int *') to parameter of type 'size_t *' (aka 'unsigned long *')-428024691#18446744073709551615#0#1(2@52"Passing argument to parameter 'outputStructCnt' here-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@166"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h0000000000000000^779#10#779#10#39791#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^152#96#152#96#5238#0#14"Semantic Issue1(3@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^152#96#152#108#5238#1#-0#0#1#-19%DVTDocumentLocation4@97"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c0000000000000000^3028"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o [1mDriverInterface.c[0m normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.c -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o36"2F9E1730-A329-45C1-B13F-636D2FD6E54D-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.596212
-e432180936.722789
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:33:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:54:29: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o        idatas.msr_num[i] = msr_num[i];
-o[0;1;32m                          ~ ^~~~~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:85:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:107:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'
-o      (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m4 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp185"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o [1mMSRAccessor.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler31d198c88ec2b941^ee06b9c88ec2b941^-1439"[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:33:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:54:29: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m        idatas.msr_num[i] = msr_num[i];[0;1;32m                          ~ ^~~~~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:85:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp:107:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t'      (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#21#32#21#2202#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#21#32#28#2202#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^32#19#32#20#2200#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#28#53#28#2879#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#28#53#38#2879#9#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^53#26#53#27#2877#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#21#84#21#3817#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#21#84#28#3817#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^84#19#84#20#3815#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-432180936#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#21#106#21#4407#0#22"Value Conversion Issue2(3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#21#106#28#4407#0#3@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^106#19#106#20#4405#0#-0#0#1#-19%DVTDocumentLocation4@93"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^3102"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o [1mMSRAccessor.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/MSRAccessor.cpp -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o36"88461442-24F9-4E43-95B4-168E87A4751C-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.879580
-e428024691.143262
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/DriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-o[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:32:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:49:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m
-o    idatas.msr_num = msr_num;
-o[0;1;32m                   ~ ^~~~~~~
-o[0m2 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp185"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o [1mMSRAccessor.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler876fe1722383b941^7eac24732383b941^-712"[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:32:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m[1m/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp:49:22: [0m[0;1;35mwarning: [0m[1mimplicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32][0m    idatas.msr_num = msr_num;[0;1;32m                   ~ ^~~~~~~[0m2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-428024691#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#21#31#21#2201#0#22"Value Conversion Issue2(3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#21#31#28#2201#0#3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^31#19#31#20#2199#0#-2@117"Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'uint32_t' (aka 'unsigned int')-428024691#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#21#48#21#2654#0#22"Value Conversion Issue2(3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#21#48#28#2654#0#3@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^48#19#48#20#2652#0#-0#0#1#-19%DVTDocumentLocation4@95"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp0000000000000000^3128"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o [1mMSRAccessor.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/MSRAccessor.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o36"ED1AAE8C-EE5E-4A59-BE3A-734F14236CF6-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s432180936.596579
-e432180936.817919
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.h
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-oIn file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:
-oIn file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one
-o      deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for
-o      C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m
-o#warning This file includes at least one deprecated or antiquated header. \
-o[0;1;32m ^
-o[0m1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp199"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler4ad398c88ec2b941^9e62d1c88ec2b941^-960"In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one      deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for      C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m#warning This file includes at least one deprecated or antiquated header. \[0;1;32m ^[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@345"This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.-432180936#18446744073709551615#0#2(2@119"In file included from /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp:17:-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@100"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^16#9#16#9#1557#0#21"Apple LLVM 5.0 Notice--2@161"In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:-432180936#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@142"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h0000000000000000^58#9#58#9#2587#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@155"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h0000000000000000^31#1#31#1#1480#0#18"#warning Directive--0#0#1#-19%DVTDocumentLocation4@100"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^3144"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=202 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.d --serialize-diagnostics /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.dia -c /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/PCIDriverInterface.cpp -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o36"01A01E31-EC19-4E90-923A-684AE9884B68-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCompileC build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s428024690.880606
-e428024691.260738
-r1
-xCompileC
-xbuild/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.h
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PcmMsr/UserKernelShared.h
-oIn file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:
-oIn file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:
-o[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one deprecated or antiquated header. Please consider using one of the 32
-o      headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m
-o#warning This file includes at least one deprecated or antiquated header. \
-o[0;1;32m ^
-o[0m1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp199"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler658ee1722383b941^87bf42732383b941^-956"In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:[1m/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: [0m[0;1;35mwarning: [0m[1mThis file includes at least one deprecated or antiquated header. Please consider using one of the 32      headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. [-W#warnings][0m#warning This file includes at least one deprecated or antiquated header. \[0;1;32m ^[0m1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@345"This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.-428024691#18446744073709551615#0#2(2@121"In file included from /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp:17:-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@102"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^16#9#16#9#1557#0#21"Apple LLVM 5.0 Notice--2@161"In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h:59:-428024691#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@142"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/map.h0000000000000000^58#9#58#9#2587#0#21"Apple LLVM 5.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@155"file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/c++/4.2.1/backward/backward_warning.h0000000000000000^31#1#31#1#1480#0#18"#warning Directive--0#0#1#-19%DVTDocumentLocation4@102"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp0000000000000000^3170"[1mCompileC[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o [1mPCIDriverInterface.cpp[0m normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=270 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-generated-files.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-own-target-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-all-target-headers.hmap -iquote /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/PcmMsr-project-headers.hmap -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources/x86_64 -I/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/DerivedSources -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -MMD -MT dependencies -MF /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.d --serialize-diagnostics /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.dia -c /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/PCIDriverInterface.cpp -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o36"D78EACF2-3612-4059-9980-F5FF0C7BD8D7-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CCreateUniversalBinary /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib normal x86_64\ i386
-s432180936.861641
-e432180936.869350
-r1
-xCreateUniversalBinary
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib
-xnormal
-xx86_64 i386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Create universal binary /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib87"[1mCreateUniversalBinary[0m [1mbuild/Release/libPcmMsr.dylib[0m normal x86_64\ i38676aadcc88ec2b941^b48edec88ec2b941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib00343448dcffdf42^689"[1mCreateUniversalBinary[0m [1mbuild/Release/libPcmMsr.dylib[0m normal x86_64\ i386    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib -output /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release/libPcmMsr.dylib36"87E0193A-101C-445F-8B42-FB2EDF0271EF-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CCreateUniversalBinary /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib normal x86_64\ i386
-s428024691.330679
-e428024691.339584
-r1
-xCreateUniversalBinary
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib
-xnormal
-xx86_64 i386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Create universal binary /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib87"[1mCreateUniversalBinary[0m [1mbuild/Release/libPcmMsr.dylib[0m normal x86_64\ i38646ef54732383b941^5fef56732383b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib003420bbdcffdf42^697"[1mCreateUniversalBinary[0m [1mbuild/Release/libPcmMsr.dylib[0m normal x86_64\ i386    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib -output /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release/libPcmMsr.dylib36"49021C06-B9BA-4B77-9F8D-8D687A06C4F9-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CLd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386
-s432180936.831287
-e432180936.860016
-r1
-xLd
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib
-xnormal
-xi386
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection158"Link /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib105"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386addfd4c88ec2b941^6b2ddcc88ec2b941^---0#0#1#--1296"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export MACOSX_DEPLOYMENT_TARGET=10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -filelist /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList -install_name /usr/lib/libPcmMsr.dylib -mmacosx-version-min=10.8 -framework IOKit -single_module -compatibility_version 1 -current_version 1 -Xlinker -dependency_info -Xlinker /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr_dependency_info.dat -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib36"73514749-3F1C-49A3-9929-3FB197782750-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CLd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64
-s432180936.830866
-e432180936.860544
-r1
-xLd
-x/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib
-xnormal
-xx86_64
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-d/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection160"Link /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib109"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64a7c9d4c88ec2b941^1a6adcc88ec2b941^---0#0#1#--1308"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64    cd /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver    export MACOSX_DEPLOYMENT_TARGET=10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -F/Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/Release -filelist /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList -install_name /usr/lib/libPcmMsr.dylib -mmacosx-version-min=10.8 -framework IOKit -single_module -compatibility_version 1 -current_version 1 -Xlinker -dependency_info -Xlinker /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr_dependency_info.dat -o /Users/clarkg1/Code/bro-instrumentation/aux/intel-pcm-2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib36"00D00A2B-33AF-4673-82AD-379DE5DC3D97-
-b77046A98-9B7E-4319-BFBE-ADB6654AE26C
-
-CLd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386
-s428024691.264632
-e428024691.330033
-r1
-xLd
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib
-xnormal
-xi386
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/MSRAccessor.o
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/DriverInterface.o
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PCIDriverInterface.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection160"Link /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib105"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386b8ca43732383b941^4d8154732383b941^---0#0#1#--1308"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib normal i386    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export MACOSX_DEPLOYMENT_TARGET=10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -filelist /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr.LinkFileList -install_name /usr/lib/libPcmMsr.dylib -mmacosx-version-min=10.8 -framework IOKit -single_module -compatibility_version 1 -current_version 1 -Xlinker -dependency_info -Xlinker /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/PcmMsr_dependency_info.dat -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/i386/libPcmMsr.dylib36"6ACFF3A3-55B5-464E-B571-38445D661A98-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
-CLd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64
-s428024691.264385
-e428024691.330030
-r1
-xLd
-x/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib
-xnormal
-xx86_64
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/MSRAccessor.o
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/DriverInterface.o
-d/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PCIDriverInterface.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection162"Link /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib109"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64d2c443732383b941^a27d54732383b941^---0#0#1#--1320"[1mLd[0m build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib normal x86_64    cd /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver    export MACOSX_DEPLOYMENT_TARGET=10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -F/Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/Release -filelist /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr.LinkFileList -install_name /usr/lib/libPcmMsr.dylib -mmacosx-version-min=10.8 -framework IOKit -single_module -compatibility_version 1 -current_version 1 -Xlinker -dependency_info -Xlinker /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/PcmMsr_dependency_info.dat -o /Users/clarkg1/Downloads/IntelPerformanceCounterMonitorV2.6/MacMSRDriver/build/PcmMsr.build/Release/PcmMsrLibrary.build/Objects-normal/x86_64/libPcmMsr.dylib36"1B5E2517-FB48-4B1D-8187-EE463E568419-
-b7CE88F59-00CE-404B-9B64-A818610C2FC3
-
