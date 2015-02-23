@@ -94,4 +94,3 @@ to pre-process the graphs intended for dot, e.g.
 unflatten -c 5 chains.out | dot -Tpng /tmp/callgraph.png
 ```
 
-There's code in here to support lower-level statistics (cache, others) via Intel PCM, but there are cross-platform considerations that make this trickier than it would be otherwise.  As such, supporting these is a TODO item.
