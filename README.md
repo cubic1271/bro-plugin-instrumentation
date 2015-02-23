@@ -94,3 +94,5 @@ to pre-process the graphs intended for dot, e.g.
 unflatten -c 5 chains.out | dot -Tpng /tmp/callgraph.png
 ```
 
+Currently, cycle counts are only supported on x86 platforms (due to rdtsc)
+
