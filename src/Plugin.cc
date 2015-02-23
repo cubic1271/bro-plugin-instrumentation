@@ -125,9 +125,10 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
 	Thus, Ref our arguments here so that the Unref in HandlePluginResult doesn't break
 	anything ...
     */
+
     {
-    loop_over_list(*args, i)
-    	Ref((*args)[i]);    	
+        loop_over_list((*args), i)
+            Ref((*args)[i]);
     }
 
     Frame* f = new Frame(func->FrameSize(), func, args);
@@ -158,8 +159,8 @@ Val* Plugin::CallBroFunction(const BroFunc *func, Frame *parent, val_list *args)
             const Location* loc = bodies[i].stmts->GetLocationInfo();
             uint32_t key = _function_table.add(func, i, loc);
 
-            _counter_stack.push_back(FunctionCounterSet::Create(_network_time));
             _function_chains.add(key);
+            _counter_stack.push_back(FunctionCounterSet::Create(_network_time));
             result = bodies[i].stmts->Exec(f, flow);
             FunctionCounterSet result = FunctionCounterSet::Create(_network_time);
             result -= _counter_stack.back();
@@ -238,20 +239,20 @@ Val* Plugin::CallBuiltinFunction(const BuiltinFunc *func, Frame *parent, val_lis
     return result;
 	}
 
-plugin::ValWrapper* Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
+std::pair<Val*, bool> Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
 	{
-	if ( func->GetKind() == Func::BRO_FUNC)
+    if ( func->GetKind() == Func::BRO_FUNC)
 		{
-		return new plugin::ValWrapper(CallBroFunction((BroFunc *)func, parent, args));
+        return std::pair<Val*, bool>(CallBroFunction((BroFunc *)func, parent, args), true);
 		} // end standard bro function call
 	else if (func->GetKind() == Func::BUILTIN_FUNC)
 		{
-		return new plugin::ValWrapper(CallBuiltinFunction((BuiltinFunc *)func, parent, args));
+        return std::pair<Val*, bool>(CallBuiltinFunction((BuiltinFunc *)func, parent, args), true);
 		}
 	else
 		{
 		reporter->Warning("[instrumentation] unable to detect function call type.  dropping through to default handler.");
-		return NULL;
+		return std::pair<Val*, bool>(NULL, false);
 		}
 
 	}

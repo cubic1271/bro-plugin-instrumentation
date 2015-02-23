@@ -23,7 +23,7 @@ class Plugin : public ::plugin::Plugin
 public:
     virtual void HookUpdateNetworkTime(double network_time);
     virtual void InitPreScript();
-    virtual plugin::ValWrapper* HookCallFunction(const Func* func, Frame *parent, val_list* args);
+    virtual std::pair<Val*, bool> HookCallFunction(const Func* func, Frame *parent, val_list* args);
 
 	static void SetCollectionTimer(const double target);
 	static void SetCollectionCount(const uint64_t target);
