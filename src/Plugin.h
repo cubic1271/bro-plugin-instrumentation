@@ -42,6 +42,11 @@ public:
 	static void SetChainDataTarget(const std::string target);
 	static void WriteChainData();
 
+    static void ExportStart(const uint16_t port);
+    static void ExportAdd(const std::string key, const std::string value);
+    static void ExportRemove(const std::string key);
+    static void ExportUpdate(); 
+
 protected:
 	virtual plugin::Configuration Configure();
 	static Val* CallBroFunction(const BroFunc* func, Frame *parent, val_list* args);

@@ -27,8 +27,6 @@ LD_PRELOAD=/path/to/syshook-malloc.so:/path/to/syshook-io.so
 * When run as root, applications ignore LD_PRELOAD (for security reasons).
 * OS/X does not support an equivalent of LD_PRELOAD in a sane fashion (DYLD_FLAT_NAMESPACE fixes this, but can yield strange behavior and / or crashes).
 
-It might be possible to fix the latter, but the former is a limitation of the technology: if there were a way to work around it, such a workaround would likely need to be patched out of existence.
-
 ### Linking the plugin to bro ###
 
 Begin by ensuring that there is *no existing build/ directory in the bro source tree*.  Next, set the following environment variable:

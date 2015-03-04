@@ -101,3 +101,35 @@ function ChainDataWrite%(%): bool
 	plugin::Instrumentation::plugin.WriteChainData();
 	return new Val(1, TYPE_BOOL);
 	%}
+
+## Starts a REST server on the specified port and begins accepting requests
+function ExportStart%(server_port: int%): bool
+    %{
+    plugin::Instrumentation::plugin.ExportStart((uint16_t) server_port);
+    return new Val(1, TYPE_BOOL);
+    %}
+
+## Exports a single value for consumption via REST.  Note that the value will not be available until "Update" is called.
+## The key, in this case, is a name for the location at which the value will be found.  For example, "a.b" will create a
+## JSON object called 'a' and place the value at a field in the object 'a' called 'b'.
+function ExportAdd%(key: string, value: string%): bool
+    %{
+    plugin::Instrumentation::plugin.ExportAdd(std::string((char *)key->Bytes()), std::string((char *)value->Bytes()));
+    return new Val(1, TYPE_BOOL);
+    %}
+
+## Removes a single value from the REST display.  Note that the value will not be available until "Update" is called.
+function ExportRemove%(key: string%): bool
+    %{
+    plugin::Instrumentation::plugin.ExportRemove(std::string((char *)key->Bytes()));
+    return new Val(1, TYPE_BOOL);
+    %}
+
+## Swaps out previous exported values for new exported values.  Anything that has been added or removed since the last time
+## update was called will be made available when this method completes its execution.
+function ExportUpdate%(%): bool
+    %{
+    plugin::Instrumentation::plugin.ExportUpdate();
+    return new Val(1, TYPE_BOOL);
+    %}
+

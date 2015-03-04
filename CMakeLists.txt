@@ -16,7 +16,7 @@ link_libraries("-ldl")
 #   link_libraries("-lPcmMsr")
 #ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
-bro_plugin_cc(src/Plugin.cc src/util/counters.cc)
+bro_plugin_cc(src/Plugin.cc src/util/counters.cc src/util/exporter.cc src/http/civetweb.c)
 bro_plugin_bif(src/consts.bif)
 bro_plugin_bif(src/events.bif)
 bro_plugin_bif(src/functions.bif)

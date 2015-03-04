@@ -13,6 +13,7 @@
 
 #include "util/functable.h"
 #include "util/funcchain.h"
+#include "util/exporter.h"
 
 namespace plugin { namespace Instrumentation { Plugin plugin; } }
 
@@ -398,3 +399,37 @@ void Plugin::FinalizeCollection()
 	FunctionCounterSet::FinalizeWriter(_stats_ofstream, _output_type);
 	_stats_ofstream.flush();
 	}
+
+static bro::rest::ExportManager _manager;
+static uint64_t _manager_update_counter = 0;
+
+// REST export code ...
+void Plugin::ExportStart(const uint16_t port)
+    {
+    _manager.Init(port);
+    }
+
+void Plugin::ExportAdd(const std::string key, const std::string value)
+    {
+    _manager.Add(key, value);
+    }
+
+void Plugin::ExportUpdate()
+    {
+    char sbuf[1024];
+    snprintf(sbuf, 1024, "%f", _network_time);
+    _manager.Add("info.time.network", sbuf);
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    snprintf(sbuf, 1024, "%f", (tv.tv_sec) + (tv.tv_usec / 1000000.0));
+    _manager.Add("info.time.real", sbuf);
+    snprintf(sbuf, 1024, "%u", (unsigned int)_manager_update_counter++);
+    _manager.Add("info.time.update", sbuf);
+    _manager.Update();
+    }
+
+void Plugin::ExportRemove(const std::string key)
+    {
+    _manager.Remove(key);
+    }
+
