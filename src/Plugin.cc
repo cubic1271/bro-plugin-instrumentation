@@ -240,20 +240,20 @@ Val* Plugin::CallBuiltinFunction(const BuiltinFunc *func, Frame *parent, val_lis
     return result;
 	}
 
-std::pair<Val*, bool> Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
+std::pair<bool, Val*> Plugin::HookCallFunction(const Func* func, Frame *parent, val_list* args)
 	{
     if ( func->GetKind() == Func::BRO_FUNC)
 		{
-        return std::pair<Val*, bool>(CallBroFunction((BroFunc *)func, parent, args), true);
+        return std::pair<bool, Val*>(true, CallBroFunction((BroFunc *)func, parent, args));
 		} // end standard bro function call
 	else if (func->GetKind() == Func::BUILTIN_FUNC)
 		{
-        return std::pair<Val*, bool>(CallBuiltinFunction((BuiltinFunc *)func, parent, args), true);
+        return std::pair<bool, Val*>(true, CallBuiltinFunction((BuiltinFunc *)func, parent, args));
 		}
 	else
 		{
 		reporter->Warning("[instrumentation] unable to detect function call type.  dropping through to default handler.");
-		return std::pair<Val*, bool>(NULL, false);
+		return std::pair<bool, Val*>(false, NULL);
 		}
 
 	}

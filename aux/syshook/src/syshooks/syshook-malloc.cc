@@ -39,7 +39,7 @@ void* calloc (size_t num, size_t size) {
     return _libc_calloc(num, size);
 }
 
-void* realloc (void* ptr, size_t size) {
+void* realloc (void* ptr, size_t size) throw () {
     if(!_libc_realloc) {
         _libc_realloc = (void* (*)(void*, size_t))(dlsym(RTLD_NEXT, "realloc"));
     }

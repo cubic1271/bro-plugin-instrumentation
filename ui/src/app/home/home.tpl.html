@@ -1,0 +1,17 @@
+<div>
+	<div class="row">Displaying profiling results in text format.  Sort by: <span ng-repeat="(key, value) in sort_func"><a ng-click="updateSort(key)" class='btn btn-sm btn-info'>{{key}}</a> </span></div>
+
+	<div class="row">
+	<pagination page="currentPage" total-items="entries.length" items-per-page="numPerPage" boundary-links="true"></pagination>
+	</div>
+	<div class="row">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="entry in pagedEntries">
+				<h4 class="list-group-item-heading">{{entry.location}}</h4>
+				<p class="list-group-item-text">Called {{entry.count}} times and used {{entry.perf.cycles}} cycles</p>
+				<p class="list-group-item-text">Allocated {{entry.memory.malloc_count}} times.</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
