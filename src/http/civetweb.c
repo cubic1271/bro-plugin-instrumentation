@@ -6477,7 +6477,7 @@ static void process_new_connection(struct mg_connection *conn)
 static int consume_socket(struct mg_context *ctx, struct socket *sp)
 {
     (void) pthread_mutex_lock(&ctx->thread_mutex);
-    DEBUG_TRACE("going idle");
+    DEBUG_TRACE("going idle%s", "");
 
     /* If the queue is empty, wait. We're idle at this point. */
     while (ctx->sq_head == ctx->sq_tail && ctx->stop_flag == 0) {
@@ -6569,7 +6569,7 @@ static void *worker_thread_run(void *thread_func_param)
 #endif
     mg_free(conn);
 
-    DEBUG_TRACE("exiting");
+    DEBUG_TRACE("exiting%s", "");
     return NULL;
 }
 
@@ -6721,7 +6721,7 @@ static void master_thread_run(void *thread_func_param)
         }
     }
     mg_free(pfd);
-    DEBUG_TRACE("stopping workers");
+    DEBUG_TRACE("stopping workers%s","");
 
     /* Stop signal received: somebody called mg_stop. Quit. */
     close_all_listening_sockets(ctx);
@@ -6745,7 +6745,7 @@ static void master_thread_run(void *thread_func_param)
 #if !defined(NO_SSL)
     uninitialize_ssl(ctx);
 #endif
-    DEBUG_TRACE("exiting");
+    DEBUG_TRACE("exiting%s","");
 
 #if defined(_WIN32) && !defined(__SYMBIAN32__)
     CloseHandle(tls.pthread_cond_helper_mutex);
