@@ -157,7 +157,7 @@ angular.module( 'broProfiler.home', [
 
     $scope.$watch("currentPage + numPerPage", $scope.updatePage);
     
-    $http.get('/profile.json')
+    $http.get('profile.json')
         .success(function(data, status, headers, config) { 
             console.log("Reading profile data ...");
             $scope.entries = data;
@@ -166,7 +166,7 @@ angular.module( 'broProfiler.home', [
             console.log("Unable to retrieve profile data: status " + status);
     });
 
-    $http.get('/collection.json')
+    $http.get('collection.json')
         .success(function(data, status, headers, config) {
             console.log("Reading collection data ...");
             $scope.collection = data;
