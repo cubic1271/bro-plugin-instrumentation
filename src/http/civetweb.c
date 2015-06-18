@@ -359,30 +359,9 @@ void *pthread_getspecific(pthread_key_t key)
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
 #if !defined(DEBUG_TRACE)
-#if defined(DEBUG)
 
-static void DEBUG_TRACE_FUNC(const char *func, unsigned line, PRINTF_FORMAT_STRING(const char *fmt), ...) PRINTF_ARGS(3, 4);
-
-static void DEBUG_TRACE_FUNC(const char *func, unsigned line, const char *fmt, ...) {
-
-  va_list args;
-  flockfile(stdout);
-  printf("*** %lu.%p.%s.%u: ",
-         (unsigned long) time(NULL), (void *) pthread_self(),
-         func, line);
-  va_start(args, fmt);
-  vprintf(fmt, args);
-  va_end(args);
-  putchar('\n');
-  fflush(stdout);
-  funlockfile(stdout);
-}
-
-#define DEBUG_TRACE(fmt, ...) DEBUG_TRACE_FUNC(__func__, __LINE__, fmt, __VA_ARGS__)
-
-#else
 #define DEBUG_TRACE(fmt, ...)
-#endif /* DEBUG */
+
 #endif /* DEBUG_TRACE */
 
 #if defined(MEMORY_DEBUGGING)
