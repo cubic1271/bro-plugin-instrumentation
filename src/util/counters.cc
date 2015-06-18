@@ -4,6 +4,8 @@ namespace plugin
 {
 namespace Instrumentation
 {
+    static uint64_t _tsc_freq = 0;
+
 	using std::ios;
 
 	FunctionCounterSet FunctionCounterSet::Create(double network_time)
@@ -29,7 +31,7 @@ namespace Instrumentation
 		if(type == OUTPUT_CSV)
 			{
 			target << "#fields"
-				   << " network_time name location count"
+				   << " network_time name location count packets"
 				   << " malloc_count free_count malloc_sz fopen_count" 
 			       << " open_count fwrite_count write_count fwrite_sz write_sz fread_count" 
 			       << " read_count fread_sz read_sz"
@@ -37,12 +39,14 @@ namespace Instrumentation
 			       << std::endl;
 
 			target << "#types" 
-				   << " double \"string\" \"string\" int"
+				   << " double \"string\" \"string\" int int"
 				   << " int int int int"
 				   << " int int int int int int"
 				   << " int int int int" 
 				   << " int"
 				   << std::endl;
+
+            target << "#note tsc_freq=" << FunctionCounterSet::GetTSCFrequency() << std::endl;
 			}
 		else if(type == OUTPUT_JSON)
 			{
@@ -58,11 +62,25 @@ namespace Instrumentation
 			}
 		}
 
+    uint64_t FunctionCounterSet::GetTSCFrequency()
+        {
+        if(!_tsc_freq) 
+            {
+            CounterSet tmp;
+            tmp.Read();
+            uint64_t start = tmp.cycles;
+            sleep(1);
+            tmp.Read();
+            _tsc_freq = tmp.cycles - start;
+        }
+        return _tsc_freq;
+        }
+
 	void FunctionCounterSet::Write(std::ofstream& target, const OutputType type)
 		{
 		if(type == OUTPUT_CSV) 
 			{
-			target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " "; 
+			target << network_time << " \"" << name << "\" \"" << location << "\" " << count << " " << packets << " "; 
 			target << memory.malloc_count << " " << memory.free_count << " ";
 			target << memory.malloc_sz << " " << io.fopen_count << " " << io.open_count << " ";
 			target << io.fwrite_count << " " << io.write_count << " " << io.fwrite_sz << " ";
@@ -78,7 +96,8 @@ namespace Instrumentation
 				target << "\"name\": \"" << name << "\",";
 				target << "\"location\": \"" << location << "\",";
 				target << "\"count\": " << count << ",";
-				target << "\"memory\": {";
+				target << "\"packets\": " << packets << ",";
+                target << "\"memory\": {";
 					target << "\"malloc_count\": " << memory.malloc_count << ",";
 					target << "\"free_count\": " << memory.free_count << ",";
 					target << "\"malloc_sz\": " << memory.malloc_sz << " },";
@@ -95,7 +114,8 @@ namespace Instrumentation
 					target << "\"read_sz\": " << io.read_sz;
 				target << "},";
 				target << "\"perf\": {";
-					target << "\"cycles\": " << perf.cycles; 
+					target << "\"cycles\": " << perf.cycles << ","; 
+                    target << "\"frequency\": " << _tsc_freq;
 				target << "}";
 			target << "}";
 			}

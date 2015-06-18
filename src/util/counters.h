@@ -29,15 +29,16 @@ namespace Instrumentation
 		std::string name;
 		std::string location;
 		uint64_t count;
-		MemoryInfo memory;
+		uint64_t packets;
+        MemoryInfo memory;
 		ReadWriteInfo io;
 		CounterSet perf;
 
 		FunctionCounterSet(const double network_time, MemoryInfo memory, ReadWriteInfo io)
-		: network_time(network_time), name("-"), location("-"), count(0), memory(memory), io(io) { perf.Read(); }
+		: network_time(network_time), name("-"), location("-"), count(0), packets(0), memory(memory), io(io) { perf.Read(); }
 
 		FunctionCounterSet()
-		: network_time(0.0), name("-"), location("-"), count(0)
+		: network_time(0.0), name("-"), location("-"), count(0), packets(0)
 		{ }
 
 		enum OutputType {
@@ -49,7 +50,17 @@ namespace Instrumentation
 		static void ConfigWriter(std::ofstream& target, const OutputType type);
 		static void FinalizeWriter(std::ofstream& target, const OutputType type);
 		static void WriteSeparator(std::ofstream& target, const OutputType type);
-		void Write(std::ofstream& target, const OutputType type);
+        /**
+         * Estimates the number of cycles per second on this processor.
+         *
+         * NOTE!  Assumes an invariant TSC, is only valid on a single physical node, and is not all that accurate.
+         *
+         * TODO: Borrow an idea from DPDK and use a better timer ...
+         *
+         * @return An estimate of the number of cycles per second.
+         */
+        static uint64_t GetTSCFrequency();
+        void Write(std::ofstream& target, const OutputType type);
 		FunctionCounterSet operator -(const FunctionCounterSet& s2)
 			{
 			FunctionCounterSet tmp;
@@ -59,6 +70,7 @@ namespace Instrumentation
 			tmp.memory = this->memory - s2.memory;
 			tmp.io = this->io - s2.io;
 			tmp.count = this->count - s2.count;
+            tmp.packets = this->packets - s2.packets;
 			tmp.perf = this->perf - s2.perf;
 			return tmp;
 			}
@@ -72,6 +84,7 @@ namespace Instrumentation
 			tmp.memory = this->memory + s2.memory;
 			tmp.io = this->io + s2.io;
 			tmp.count = this->count + s2.count;
+            tmp.packets = this->packets + s2.packets;
 			tmp.perf = this->perf + s2.perf;
 			return tmp;
 			}
@@ -84,7 +97,8 @@ namespace Instrumentation
 			this->memory += s2.memory;
 			this->io += s2.io;
 			this->count += s2.count;
-			this->perf += s2.perf;
+			this->packets += s2.packets;
+            this->perf += s2.perf;
 			return *this;
 			}
 
@@ -96,7 +110,8 @@ namespace Instrumentation
 			this->memory -= s2.memory;
 			this->io -= s2.io;
 			this->count -= s2.count;
-			this->perf -= s2.perf;
+			this->packets -= s2.packets;
+            this->perf -= s2.perf;
 			return *this;
 			}
 	};

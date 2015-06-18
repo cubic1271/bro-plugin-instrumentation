@@ -40,6 +40,7 @@ static uint64_t _fchain_cutoff = 0;
 static CounterSet _original_state;
 
 static double _network_time;
+static uint64_t _packet_count = 0;
 // transient state needed to keep track of counter start points while functions are executing
 static std::vector<FunctionCounterSet> _counter_stack;
 // persistent counter state
@@ -79,6 +80,7 @@ void Plugin::SetOutputDataFormat(std::string type)
 
 void Plugin::HookUpdateNetworkTime(const double network_time)
 	{
+    ++_packet_count;
 	_network_time = network_time;
 	++_last_stats_count;
 
@@ -267,6 +269,7 @@ void Plugin::InitPreScript()
 	EnableHook(HOOK_CALL_FUNCTION);
 	
     // reporter->Info("[instrumentation] initialization completed.\n");
+    FunctionCounterSet::GetTSCFrequency(); 
 	_original_state.Read();
 
 	}
@@ -385,7 +388,8 @@ void Plugin::WriteCollection()
 		_stats_separator = true;
 	}
 	FunctionCounterSet set = FunctionCounterSet::Create(_network_time);
-	set.Write(_stats_ofstream, _output_type);
+    set.packets = _packet_count;
+    set.Write(_stats_ofstream, _output_type);
 	}
 
 void Plugin::FlushCollection()
@@ -396,6 +400,7 @@ void Plugin::FlushCollection()
 
 void Plugin::FinalizeCollection()
 	{
+    WriteCollection();
 	FunctionCounterSet::FinalizeWriter(_stats_ofstream, _output_type);
 	_stats_ofstream.flush();
 	}
