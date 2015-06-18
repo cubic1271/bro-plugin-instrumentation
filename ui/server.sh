@@ -7,7 +7,8 @@ grunt
 pushd build
 rm -f ./bro && ln -s $SCRIPTDIR bro
 cp ../data/bro-profile-function ./profile.json
+cp ../data/bro-profile-collection ./collection.json
+cp ../data/callgraph.png ./callgraph.png
 echo "Bro path is $BROPATH and script directory is $SCRIPTDIR ..."
-(sleep 1 && firefox 'http://localhost:8000')&
 python -m SimpleHTTPServer
 

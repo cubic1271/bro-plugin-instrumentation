@@ -1,17 +1,33 @@
 <div>
-	<div class="row">Displaying profiling results in text format.  Sort by: <span ng-repeat="(key, value) in sort_func"><a ng-click="updateSort(key)" class='btn btn-sm btn-info'>{{key}}</a> </span></div>
+    <div class="row"><h4>Runtime Data</h4><div id='chart'></div></div>
+    <div class="row"> &nbsp; </div>
+    <div class="row">
+        <button type="button" class="btn btn-primary" ng-model="normalizeData" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">
+            Normalize Data 
+        </button>
+        <span style='text-decoration:italic; font-size:0.8em;'>This will normalize all values, possibly making it easier to identify patterns in data ...</span>
+    </div>
+    <div class="row"><hr /></div>
+    <div class="row"><h4>Profiling Results</h4>Sort by: <span ng-repeat="(key, value) in sort_func"><a ng-click="updateSort(key)" class='btn btn-sm btn-info'>{{key}}</a> </span></div>
 
-	<div class="row">
-	<pagination page="currentPage" total-items="entries.length" items-per-page="numPerPage" boundary-links="true"></pagination>
-	</div>
-	<div class="row">
-		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="entry in pagedEntries">
-				<h4 class="list-group-item-heading">{{entry.location}}</h4>
-				<p class="list-group-item-text">Called {{entry.count}} times and used {{entry.perf.cycles}} cycles</p>
-				<p class="list-group-item-text">Allocated {{entry.memory.malloc_count}} times.</p>
-			</li>
-		</ul>
-	</div>
+    <div class="row">
+    <pagination page="currentPage" total-items="entries.length" items-per-page="numPerPage" boundary-links="true"></pagination>
+    </div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="entry in pagedEntries">
+                <h4 class="list-group-item-heading">{{entry.name}} @ {{entry.location}}</h4>
+                <p class="list-group-item-text">Called {{entry.count}} times and used {{entry.perf.cycles}} cycles (~{{round(entry.perf.cycles / entry.perf.frequency, 4)}} cpu seconds)</p>
+                <p class="list-group-item-text">Allocated {{entry.memory.malloc_count}} times.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <h4>Call Graph</h4>
+    </div>
+    <div class="row">
+        Click <a href='callgraph.png' target='_blank'>here</a> to load a call graph of this execution.  WARNING: Call graphs tend to be huge, and can actually exceed the size supported by the browser in some cases ...
+    </div>
 </div>
 
